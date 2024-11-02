@@ -1,0 +1,29 @@
+/* Portfolio.css */
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  background-color: whitesmoke;
+}
+
+.layout {
+  display: flex;
+  justify-content: center;
+  align-items: stretch;
+  height: 100vh;
+}
+
+.asideLeft,
+.asideRight {
+  flex: 1;
+}
+
+main {
+  min-width: 1000px;
+  padding: 1em;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  /* border: 1px solid red; */
+}

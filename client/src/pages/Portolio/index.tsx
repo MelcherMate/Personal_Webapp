@@ -1,10 +1,16 @@
-import ConstructionPage from "../../components/ConstructionPage";
+import Book from "../../components/Book";
 import "./Portfolio.css";
 
 function Portfolio() {
   return (
     <>
-      <ConstructionPage></ConstructionPage>
+      <div className="layout">
+        <aside className="asideLeft"></aside>
+        <main>
+          <Book />
+        </main>
+        <aside className="asideRight"></aside>
+      </div>
     </>
   );
 }
