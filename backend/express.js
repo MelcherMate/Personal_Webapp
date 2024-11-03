@@ -66,14 +66,9 @@ app.get("/", (req, res) => {
 if (process.env.NODE_ENV === "development") {
   // Development-specific code, if needed
 } else {
-  app.use(
-    "/",
-    express.static(path.join(__dirname, "../client-react-ts/src/dist/"))
-  );
+  app.use("/", express.static(path.join(__dirname, "../client/src/dist/")));
   app.get("/*", (req, res) => {
-    res.sendFile(
-      path.join(__dirname, "../client-react-ts/src/dist/index.html")
-    );
+    res.sendFile(path.join(__dirname, "../client/src/dist/index.html"));
   });
 }
 
