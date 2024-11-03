@@ -1,7 +1,7 @@
 {
-  "name": "fermenter-backend",
+  "name": "personal-webapp-backend",
   "version": "1.0.0",
-  "description": "backend services for fermentor client",
+  "description": "backend services for presonal webapp client",
   "author": "Mate Melcher",
   "main": "app.js",
   "scripts": {
