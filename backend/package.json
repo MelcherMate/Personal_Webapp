@@ -1,13 +1,13 @@
 {
-  "name": "personal-webapp-backend",
+  "name": "backend",
   "version": "1.0.0",
-  "description": "backend services for presonal webapp client",
+  "description": "backend services for personal webapp client",
   "author": "Mate Melcher",
   "main": "app.js",
   "scripts": {
     "build": "npx babel app.js --out-file app-compiled.js",
     "dev": "NODE_ENV=development nodemon app.js",
-    "start": "cd ../client && npm run build && cp -r dist ../backend/dist && cd ../backend && NODE_ENV=production node app.js"
+    "start": "cp -r ../client/src/dist . && NODE_ENV=production node app.js"
   },
   "nodemonConfig": {
     "verbose": true,
