@@ -82,9 +82,5 @@ if (process.env.NODE_ENV === "development") {
   app.use("*", function (req, res, next) {});
 }
 
-// # 404 handler
-app.use("*", (req, res) => {
-  res.status(404).json({ message: "Resource not found" });
-});
-
+app.use("*", function (req, res, next) {});
 export default app;
