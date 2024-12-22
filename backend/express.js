@@ -1,4 +1,5 @@
 import compress from "compression";
+import cookieParser from "cookie-parser";
 import cors from "cors";
 import dotenv from "dotenv";
 import express from "express";
@@ -16,9 +17,13 @@ if (process.env.NODE_ENV === "development") {
 const app = express();
 
 // # Middleware
+app.use(cookieParser());
+// parse body params and attach them to req.body
 app.use(express.urlencoded({ extended: true }));
+// To parse the incoming requests with JSON payloads
 app.use(express.json());
 app.use(compress());
+// secure apps by setting various HTTP headers
 
 if (process.env.NODE_ENV === "development") {
   app.use(helmet());
