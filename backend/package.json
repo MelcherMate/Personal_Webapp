@@ -6,8 +6,8 @@
   "main": "app.js",
   "scripts": {
     "build": "npx babel app.js --out-file app-compiled.js",
-    "dev": "NODE_ENV=development nodemon start.js",
-    "start": "cp -r ../client/src/dist . && NODE_ENV=production node start.js"
+    "dev": "NODE_ENV=development nodemon app.js",
+    "start": "cp -r ../client/src/dist . && NODE_ENV=production node app.js"
   },
   "nodemonConfig": {
     "verbose": true,
