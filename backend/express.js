@@ -64,12 +64,21 @@ app.get("/", (req, res) => {
 
 // # Serving
 if (process.env.NODE_ENV === "development") {
-  // Development-specific code, if needed
 } else {
-  app.use("/", express.static(path.join(__dirname, "../client/src/dist/")));
-  app.get("/*", (req, res) => {
-    res.sendFile(path.join(__dirname, "../client/src/dist/index.html"));
+  // serving the frontend dev, and prod folders as static resources
+  app.use(
+    "/",
+    express.static(path.join(__dirname, "../client-react-ts/src/dist/"))
+  );
+  /* final catch-all route to index.html defined last; trailing / is important (!!!) */
+  app.get("/*", (req, res, next) => {
+    res.sendFile(path.join(__dirname, "../client-react-ts/src/dist/"));
   });
+  app.use("*", function (req, res, next) {
+    // serve files upon refresh window
+  });
+
+  app.use("*", function (req, res, next) {});
 }
 
 // # 404 handler
