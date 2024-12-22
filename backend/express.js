@@ -7,11 +7,12 @@ import helmet from "helmet";
 import path from "path";
 
 // # DotEnv configuration
-if (process.env.NODE_ENV === "development") {
-  dotenv.config({ path: path.resolve(__dirname + "/.env.dev") });
-} else {
-  dotenv.config({ path: path.resolve(__dirname + "/.env.prod") });
-}
+dotenv.config({
+  path: path.resolve(
+    __dirname,
+    process.env.NODE_ENV === "development" ? ".env.dev" : ".env.prod"
+  ),
+});
 
 // # Server Creation
 const app = express();

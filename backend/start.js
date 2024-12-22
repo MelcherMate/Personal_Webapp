@@ -3,7 +3,12 @@ import path from "path";
 import app from "./express";
 
 // # DotEnv configuration
-dotenv.config({ path: path.resolve(__dirname + "/.env") });
+dotenv.config({
+  path: path.resolve(
+    __dirname,
+    process.env.NODE_ENV === "development" ? ".env.dev" : ".env.prod"
+  ),
+});
 
 console.log("*********************************************************");
 console.log(
