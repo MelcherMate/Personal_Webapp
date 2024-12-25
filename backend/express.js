@@ -78,13 +78,10 @@ app.use(cors(corsOptions));
 if (process.env.NODE_ENV === "development") {
 } else {
   // serving the frontend dev, and prod folders as static resources
-  app.use(
-    "/",
-    express.static(path.join(__dirname, "../client-react-ts/src/dist/"))
-  );
+  app.use("/", express.static(path.join(__dirname, "../client/src/dist/")));
   /* final catch-all route to index.html defined last; trailing / is important (!!!) */
   app.get("/*", (req, res, next) => {
-    res.sendFile(path.join(__dirname, "../client-react-ts/src/dist/"));
+    res.sendFile(path.join(__dirname, "../client/src/dist/"));
   });
   app.use("*", function (req, res, next) {
     // serve files upon refresh window
