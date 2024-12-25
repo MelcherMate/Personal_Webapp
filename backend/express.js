@@ -21,7 +21,7 @@ const app = express();
 app.use(
   cookieSession({
     name: "session",
-    keys: ["bioversee"],
+    keys: ["matemelcher"],
     maxAge: 24 * 60 * 60 * 100,
   })
 );
