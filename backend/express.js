@@ -7,23 +7,21 @@ import helmet from "helmet";
 import path from "path";
 
 // # DotEnv configuration
-if (process.env.NODE_ENV === "development") {
-  dotenv.config({ path: path.resolve(__dirname + "/.env.dev") });
-} else {
-  dotenv.config({ path: path.resolve(__dirname + "/.env.prod") });
-}
+dotenv.config({
+  path: path.resolve(
+    __dirname,
+    process.env.NODE_ENV === "development" ? ".env.dev" : ".env.prod"
+  ),
+});
 
 // # Server Creation
 const app = express();
 
 // # Middleware
 app.use(cookieParser());
-// parse body params and attach them to req.body
 app.use(express.urlencoded({ extended: true }));
-// To parse the incoming requests with JSON payloads
 app.use(express.json());
 app.use(compress());
-// secure apps by setting various HTTP headers
 
 if (process.env.NODE_ENV === "development") {
   app.use(helmet());
@@ -34,53 +32,48 @@ if (process.env.NODE_ENV === "development") {
         defaultSrc: ["'self'"],
         scriptSrc: [
           "'self'",
-          "'unsafe-inline'",
           "https://matemelcher.com/",
-          "https://www.matemelcher.com/",
           "https://mate-melcher.onrender.com/",
         ],
         connectSrc: [
           "'self'",
-          "'unsafe-inline'",
           "https://matemelcher.com/",
-          "https://www.matemelcher.com/",
           "https://mate-melcher.onrender.com/",
         ],
-        imgSrc: ["*", "data:"],
+        imgSrc: ["'self'", "data:"],
       },
     })
   );
 }
 
 // # CORS middleware
-var corsFrontendSources = process.env.PUBLIC_URL;
-var corsOptions = {
-  origin: corsFrontendSources,
+const corsOptions = {
+  origin: process.env.PUBLIC_URL,
   optionsSuccessStatus: 200,
   credentials: true,
 };
 app.use(cors(corsOptions));
 
 // # Routes
-app.get("/", (req, res) => {
+app.get("/api", (req, res) => {
   res.send("API is running");
 });
 
-// # Serving
-if (process.env.NODE_ENV === "development") {
-} else {
-  // serving the frontend dev, and prod folders as static resources
-  app.use("/", express.static(path.join(__dirname, "../client/src/dist/")));
-  /* final catch-all route to index.html defined last; trailing / is important (!!!) */
-  app.get("/*", (req, res, next) => {
-    res.sendFile(path.join(__dirname, "../client/src/dist/"));
-  });
-  app.use("*", function (req, res, next) {
-    // serve files upon refresh window
-  });
+// # Serving static files
+if (process.env.NODE_ENV !== "development") {
+  const staticPath = path.join(__dirname, "../client/dist");
+  app.use(express.static(staticPath));
 
-  app.use("*", function (req, res, next) {});
+  // Catch-all route for React frontend
+  app.get("/*", (req, res) => {
+    res.sendFile(path.join(staticPath, "index.html"));
+  });
 }
 
-app.use("*", function (req, res, next) {});
+// Start server
+const PORT = process.env.PORT || 3000;
+app.listen(PORT, () => {
+  console.log(`Server is running on port ${PORT}`);
+});
+
 export default app;
