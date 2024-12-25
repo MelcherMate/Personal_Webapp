@@ -1,6 +1,6 @@
-import { BrowserRouter, Route, Routes } from "react-router-dom";
+import { BrowserRouter, Navigate, Route, Routes } from "react-router-dom";
 import "./App.css";
-import Portfolio from "./pages/Portolio";
+import Portfolio from "./pages/Portfolio"; // Corrected the typo in the import statement
 
 function App() {
   return (
@@ -9,6 +9,7 @@ function App() {
         <div className="appContainer">
           <Routes>
             <Route path="/" element={<Portfolio />} />
+            <Route path="*" element={<Navigate to="/" />} />
           </Routes>
         </div>
       </BrowserRouter>
