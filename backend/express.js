@@ -1,5 +1,6 @@
 import compress from "compression";
 import cookieParser from "cookie-parser";
+import cookieSession from "cookie-session"; // Add this line
 import cors from "cors";
 import dotenv from "dotenv";
 import express from "express";
