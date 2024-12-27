@@ -13,6 +13,12 @@ export default defineConfig(({ mode }) => {
   return {
     root,
     plugins: [react()],
+    resolve: {
+      alias: {
+        "@img": resolve(__dirname, "src/utils/img"),
+        "@pdf": resolve(__dirname, "src/utils/pdf"),
+      },
+    },
     define: {
       "process.env": {
         VITE_PUBLIC_URL: env.VITE_PUBLIC_URL,

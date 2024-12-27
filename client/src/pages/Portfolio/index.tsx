@@ -1,4 +1,3 @@
-import "../../utils/img/Schoolar.png";
 import "./Portfolio.css";
 
 function Portfolio() {
