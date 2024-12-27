@@ -24,7 +24,7 @@ function Portfolio() {
                     </h3>
                   </td>
                   <td>
-                    <img src="../../utils/img/profNoBg.png"></img>
+                    <img src="client/public/img/profNoBg.png"></img>
                   </td>
                 </tr>
               </table>
@@ -55,7 +55,7 @@ function Portfolio() {
                 GitHub
               </a>
               <a
-                href="/utils/resume/ResumeENG.pdf"
+                href="client/public/pdf/ResumeENG.pdf"
                 className="linkButton"
                 download
                 target="_blank"
