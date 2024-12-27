@@ -32,6 +32,7 @@ function Portfolio() {
               <a
                 href="https://www.linkedin.com/in/mate-melcher-5a16601bb/"
                 className="linkButton"
+                id="linedinButton"
                 target="_blank"
                 rel="noopener noreferrer"
               >
@@ -40,6 +41,7 @@ function Portfolio() {
               <a
                 href="https://scholar.google.com/citations?user=udUgb-IAAAAJ&hl=hu&authuser=1"
                 className="linkButton"
+                id="scholarButton"
                 target="_blank"
                 rel="noopener noreferrer"
               >
@@ -48,6 +50,7 @@ function Portfolio() {
               <a
                 href="https://github.com/MelcherMate"
                 className="linkButton"
+                id="githubButton"
                 target="_blank"
                 rel="noopener noreferrer"
               >
@@ -56,6 +59,7 @@ function Portfolio() {
               <a
                 href="../../utils/pdf/ResumeENG.pdf"
                 className="linkButton"
+                id="resumeButton"
                 download
                 target="_blank"
                 rel="noopener noreferrer"

@@ -110,6 +110,22 @@ main {
   background-color: darkgray;
 }
 
+#linedinButton {
+  background-color: #0c65c2;
+}
+
+#scholarButton {
+  background-color: #73a2f2;
+}
+
+#githubButton {
+  background-color: #202228;
+}
+
+#resumeButton {
+  background-color: #f62716;
+}
+
 #section2 {
   background-color: #282830;
 }
