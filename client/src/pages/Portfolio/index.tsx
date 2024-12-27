@@ -9,16 +9,25 @@ function Portfolio() {
         <main>
           <div className="content">
             <div className="section" id="section1">
-              <h2 id="hi">Hi I am</h2>
-              <h1 id="myName">Mate Melcher</h1>
-              <div className="separation"> </div>
-              <h3 className="text">
-                {" "}
-                I started out wanting to cure diseases. Then I wanted to sell
-                things. Now I just want my code working. I'm a biochemical
-                engineer/marketing specialist turned web developer, currently
-                working for a bank.{" "}
-              </h3>
+              <table>
+                <tr>
+                  <td>
+                    <h2 id="hi">Hi I am</h2>
+                    <h1 id="myName">Mate Melcher</h1>
+                    <div className="separation"> </div>
+                    <h3 className="text">
+                      {" "}
+                      I started out wanting to cure diseases. Then I wanted to
+                      sell things. Now I just want my code working. I'm a
+                      biochemical engineer/marketing specialist turned web
+                      developer, currently working for a bank.{" "}
+                    </h3>
+                  </td>
+                  <td>
+                    <img src="../../utils/img/profNoBg.png"></img>
+                  </td>
+                </tr>
+              </table>
             </div>
             <div className="linkContainer">
               <a
