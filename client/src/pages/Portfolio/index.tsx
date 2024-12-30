@@ -1,3 +1,4 @@
+import profNoBg from "../../../public/img/profNoBg.png";
 import "./Portfolio.css";
 
 function Portfolio() {
@@ -19,14 +20,16 @@ function Portfolio() {
                       I started out wanting to cure diseases. Then I wanted to
                       sell things. Now I just want my code working. I'm a
                       biochemical engineer/marketing specialist turned web
-                      developer, currently working for a bank.{" "}
+                      developer, currently working for a bank and for my own
+                      company.{" "}
                     </h3>
                   </td>
                   <td>
-                    <img src="../../utils/img/profNoBg.png"></img>
+                    <img src={profNoBg}></img>
                   </td>
                 </tr>
               </table>
+              <div className="backgroundCircles"></div>
             </div>
             <div className="linkContainer">
               <a
