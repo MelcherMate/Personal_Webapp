@@ -1,5 +1,8 @@
+import bvLogo from "../../../public/img/bvLogo.png";
 import profNoBg from "../../../public/img/profNoBg.png";
+import udLogo from "../../../public/img/udLogo.png";
 import ResumeENG from "../../../public/pdf/ResumeENG.pdf";
+import InfoCard from "../../components/infoCard";
 import "./Portfolio.css";
 
 function Portfolio() {
@@ -63,25 +66,29 @@ function Portfolio() {
                 id="resumeButton"
                 download
                 target="_blank"
-                rel="noopener noreferrer"
               >
                 Resume
               </a>
             </div>
             <div className="section" id="section2">
-              <table className="table2">
-                <tr className="table2Row">
-                  <td className="table2LeftCell">
-                    <div className="infoContainer"></div>
-                  </td>
-                  <td className="table2CenterCell">
-                    <div className="infoContainer"></div>
-                  </td>
-                  <td className="table2RightCell">
-                    <div className="infoContainer"></div>
-                  </td>
-                </tr>
-              </table>
+              <InfoCard
+                title="Biochemical Engineering"
+                imagePath={udLogo}
+                subtitle="Where it all began"
+                content="When I was a kid, I dreamed of being a doctor—until I realized I was more fascinated by machines! Instead of giving up on biology, I decided to mix it with my love for engineering. That’s how I ended up diving headfirst into the awesome world of Bioengineering."
+              />
+              <InfoCard
+                title="Commerce and Marketing"
+                imagePath={udLogo}
+                subtitle="A new path"
+                content="I think being a rockstar engineer isn’t just about crafting brilliant, sustainable, and ethical products that hit the sweet spot of market demand—it’s also about teaming up with the business crew to keep the company thriving and the profits rolling in."
+              />{" "}
+              <InfoCard
+                title="Software Engineering"
+                imagePath={bvLogo}
+                subtitle="Entepreneurship"
+                content="To put my engineering and marketing skills to the ultimate test, I launched my own company, Bioversee. Now, I’m diving into exciting projects with clients, building an interactive web application for industrial PLC control systems—and loving every minute of the challenge."
+              />
             </div>
             {/* <div className="section" id="section3"></div> */}
           </div>

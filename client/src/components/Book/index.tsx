@@ -22,7 +22,11 @@ function Book() {
         <p>Mate Melcher</p>
       </div>
       <div className="content">
-        <img src="/utils/img/cv.png" className="resumeIcon" alt="Resume Icon" />
+        <img
+          src="../../../public/img/cover.jpg"
+          className="resumeIcon"
+          alt="Resume Icon"
+        />
         <div
           className="download-button"
           onMouseEnter={() => setShowOptions(true)}
