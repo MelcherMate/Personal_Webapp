@@ -55,24 +55,36 @@ main {
 
 #section1 {
   background-color: #383543;
-  max-height: 500px;
 }
 
-table {
+.table1 {
   z-index: 3;
   width: 100%;
+  height: 100%;
   border-collapse: collapse;
-  border-spacing: 0;
   background: none;
 }
-
-table td {
+.table1Row {
   width: 50%;
   background: none;
 }
-
-table tr {
+.table1LeftCell {
   background: none;
+}
+.table1RightCell {
+  background: none;
+}
+
+#hi {
+  display: flex;
+  position: relative;
+  background: none;
+  z-index: 2;
+  font-size: 48px;
+  color: white;
+  padding-left: 60px;
+  font-weight: lighter;
+  padding-bottom: 10px;
 }
 
 #myName {
@@ -82,7 +94,7 @@ table tr {
   z-index: 2;
   font-size: 68px;
   color: white;
-  padding-left: 47px;
+  padding-left: 60px;
   font-weight: bold;
   padding-bottom: 10px;
 }
@@ -94,11 +106,11 @@ table tr {
   background-color: gold;
   width: 250px;
   height: 2px;
-  margin-left: 50px;
+  margin-left: 60px;
   margin-bottom: 10px;
 }
 
-.text {
+.intro {
   display: flex;
   position: relative;
   z-index: 2;
@@ -106,7 +118,7 @@ table tr {
   background: none;
   font-size: 16px;
   color: white;
-  padding-left: 47px;
+  padding-left: 60px;
   padding-top: 15px;
   font-weight: lighter;
   line-height: 24px;
@@ -116,8 +128,8 @@ table tr {
 img {
   position: relative;
   z-index: 2;
-  left: 125px;
-  width: 65%;
+  left: 224px;
+  width: 60%;
   height: auto;
   background: none;
 }
@@ -139,9 +151,8 @@ img {
 
 .linkButton {
   width: 170px;
-  padding: 10px 20px;
+  height: 50px;
   border-radius: 2px;
-  background-color: gray;
   color: white;
   display: flex;
   align-items: center;
@@ -149,7 +160,6 @@ img {
   font-weight: bold;
   cursor: pointer;
   text-decoration: none;
-  transition: background-color 0.3s ease;
 }
 
 .linkButton:hover {
@@ -178,6 +188,44 @@ img {
 
 #section2 {
   background-color: #282830;
+  height: 500px;
+}
+
+.table2 {
+  margin-top: 50px;
+  z-index: 3;
+  width: 100%;
+  height: 100%;
+  border-collapse: collapse;
+  background: none;
+}
+.table2Row {
+  width: 50%;
+  background: none;
+  /* border: 1px solid red; */
+  justify-content: center;
+  align-items: center;
+}
+.table2LeftCell {
+  background: none;
+}
+.table2CenterCell {
+  background: none;
+  /* border: 1px solid red; */
+}
+.table2RightCell {
+  background: none;
+}
+
+.infoContainer {
+  display: flex;
+  position: relative;
+  z-index: 3;
+  width: 85%;
+  height: 85%;
+  background: #403f50;
+  border-radius: 2px;
+  margin: 30px;
 }
 
 /* --------------------- */
@@ -187,16 +235,4 @@ img {
 #section3 {
   z-index: 2;
   background-color: #f0f0f0;
-}
-
-#hi {
-  display: flex;
-  position: relative;
-  background: none;
-  z-index: 2;
-  font-size: 48px;
-  color: white;
-  padding-left: 47px;
-  font-weight: lighter;
-  padding-bottom: 10px;
 }

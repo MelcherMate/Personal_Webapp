@@ -10,13 +10,13 @@ function Portfolio() {
         <main>
           <div className="content">
             <div className="section" id="section1">
-              <table>
-                <tr>
-                  <td>
+              <table className="table1">
+                <tr className="table1Row">
+                  <td className="table1LeftCell">
                     <h2 id="hi">Hi I am</h2>
                     <h1 id="myName">Mate Melcher</h1>
                     <div className="separation"> </div>
-                    <h3 className="text">
+                    <h3 className="intro">
                       {" "}
                       I started out wanting to cure diseases. Then I wanted to
                       sell things. Now I just want my code working. I'm a
@@ -25,7 +25,7 @@ function Portfolio() {
                       company.{" "}
                     </h3>
                   </td>
-                  <td>
+                  <td className="table1RightCell">
                     <img src={profNoBg}></img>
                   </td>
                 </tr>
@@ -38,7 +38,6 @@ function Portfolio() {
                 className="linkButton"
                 id="linedinButton"
                 target="_blank"
-                rel="noopener noreferrer"
               >
                 LinkedIn
               </a>
@@ -47,7 +46,6 @@ function Portfolio() {
                 className="linkButton"
                 id="scholarButton"
                 target="_blank"
-                rel="noopener noreferrer"
               >
                 Google Scholar
               </a>
@@ -56,7 +54,6 @@ function Portfolio() {
                 className="linkButton"
                 id="githubButton"
                 target="_blank"
-                rel="noopener noreferrer"
               >
                 GitHub
               </a>
@@ -71,7 +68,21 @@ function Portfolio() {
                 Resume
               </a>
             </div>
-            <div className="section" id="section2"></div>
+            <div className="section" id="section2">
+              <table className="table2">
+                <tr className="table2Row">
+                  <td className="table2LeftCell">
+                    <div className="infoContainer"></div>
+                  </td>
+                  <td className="table2CenterCell">
+                    <div className="infoContainer"></div>
+                  </td>
+                  <td className="table2RightCell">
+                    <div className="infoContainer"></div>
+                  </td>
+                </tr>
+              </table>
+            </div>
             {/* <div className="section" id="section3"></div> */}
           </div>
         </main>
