@@ -1,4 +1,5 @@
 import profNoBg from "../../../public/img/profNoBg.png";
+import ResumeENG from "../../../public/pdf/ResumeENG.pdf";
 import "./Portfolio.css";
 
 function Portfolio() {
@@ -60,7 +61,7 @@ function Portfolio() {
                 GitHub
               </a>
               <a
-                href="../../utils/pdf/ResumeENG.pdf"
+                href={ResumeENG}
                 className="linkButton"
                 id="resumeButton"
                 download
