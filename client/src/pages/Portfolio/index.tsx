@@ -1,6 +1,6 @@
 import bvLogo from "../../../public/img/bvLogo.png";
 import profNoBg from "../../../public/img/profNoBg.png";
-import udLogo from "../../../public/img/udLogo.png";
+import udLogoWhite from "../../../public/img/udLogoWhite.png";
 import ResumeENG from "../../../public/pdf/ResumeENG.pdf";
 import InfoCard from "../../components/infoCard";
 import "./Portfolio.css";
@@ -73,13 +73,13 @@ function Portfolio() {
             <div className="section" id="section2">
               <InfoCard
                 title="Biochemical Engineering"
-                imagePath={udLogo}
+                imagePath={udLogoWhite}
                 subtitle="Where it all began"
                 content="When I was a kid, I dreamed of being a doctor—until I realized I was more fascinated by machines! Instead of giving up on biology, I decided to mix it with my love for engineering. That’s how I ended up diving headfirst into the awesome world of Bioengineering."
               />
               <InfoCard
                 title="Commerce and Marketing"
-                imagePath={udLogo}
+                imagePath={udLogoWhite}
                 subtitle="A new path"
                 content="I think being a rockstar engineer isn’t just about crafting brilliant, sustainable, and ethical products that hit the sweet spot of market demand—it’s also about teaming up with the business crew to keep the company thriving and the profits rolling in."
               />{" "}
