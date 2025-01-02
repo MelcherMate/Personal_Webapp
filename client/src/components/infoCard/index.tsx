@@ -16,10 +16,10 @@ const InfoCard: React.FC<InfoCardProps> = ({
 }) => {
   return (
     <div className="infoCard">
-      <h1 id="title">{title}</h1>
       <img src={imagePath} alt={title} id="image" />
       <h2 id="subtitle">{subtitle}</h2>
       <p id="text">{content}</p>
+      <p className="showMore">show more </p>
     </div>
   );
 };

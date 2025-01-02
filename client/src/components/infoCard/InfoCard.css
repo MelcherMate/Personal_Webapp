@@ -1,41 +1,53 @@
 .infoCard {
-  height: 480px;
-  width: 300px;
+  height: 380px;
+  width: 330px;
   text-align: center;
   border-radius: 2px;
   cursor: default;
   background-color: #403f50;
   color: white;
-  padding: 12px;
+  padding: 10px 20px;
 }
 
-#title {
-  font-size: 22px;
-  font-weight: bold;
+#title,
+#subtitle,
+#text,
+.showMore {
   background-color: #403f50;
+}
+
+#title,
+#subtitle {
+  font-size: 20px;
+  font-weight: bold;
   margin-bottom: 10px;
+  text-align: left;
 }
 
 #image {
   position: relative;
-  height: 170px;
+  height: 120px;
   width: auto;
   left: 0px;
-  margin-bottom: 10px;
 }
 
 #subtitle {
-  font-size: 20px;
-  font-weight: bold;
-  background-color: #403f50;
-  margin-bottom: 10px;
+  margin-bottom: 8px;
 }
 
 #text {
-  font-size: 16px;
-  background-color: #403f50;
-  font-style: italic;
+  font-size: 17px;
   font-weight: lighter;
-  letter-spacing: 0.8px;
-  text-align: justify;
+  text-align: left;
+}
+
+.showMore {
+  position: relative;
+  bottom: -40px;
+  font-size: 16px;
+  text-align: left;
+  font-weight: lighter;
+  text-decoration: none;
+  cursor: pointer;
+  color: #ffd000;
 }

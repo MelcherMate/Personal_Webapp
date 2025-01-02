@@ -71,6 +71,7 @@ function Portfolio() {
               </a>
             </div>
             <div className="section" id="section2">
+              {" "}
               <InfoCard
                 title="Biochemical Engineering"
                 imagePath={udLogoWhite}
@@ -90,7 +91,8 @@ function Portfolio() {
                 content="To put my engineering and marketing skills to the ultimate test, I launched my own company, Bioversee. Now, I’m diving into exciting projects with clients, building an interactive web application for industrial PLC control systems—and loving every minute of the challenge."
               />
             </div>
-            {/* <div className="section" id="section3"></div> */}
+            {/* <div className="infoContainer"></div> */}
+            <div className="section" id="section3"></div>
           </div>
         </main>
         <aside className="asideRight"></aside>
