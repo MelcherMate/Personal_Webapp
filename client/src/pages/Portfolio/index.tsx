@@ -77,18 +77,21 @@ function Portfolio() {
                 imagePath={udLogoWhite}
                 subtitle="Where it all began"
                 content="When I was a kid, I dreamed of being a doctor—until I realized I was more fascinated by machines! Instead of giving up on biology, I decided to mix it with my love for engineering. That’s how I ended up diving headfirst into the awesome world of Bioengineering."
+                backContent="Work in progress ..."
               />
               <InfoCard
                 title="Commerce and Marketing"
                 imagePath={udLogoWhite}
                 subtitle="A new path"
                 content="I think being a rockstar engineer isn’t just about crafting brilliant, sustainable, and ethical products that hit the sweet spot of market demand—it’s also about teaming up with the business crew to keep the company thriving and the profits rolling in."
+                backContent="Work in progress ..."
               />{" "}
               <InfoCard
                 title="Software Engineering"
                 imagePath={bvLogo}
                 subtitle="Entepreneurship"
                 content="To put my engineering and marketing skills to the ultimate test, I launched my own company, Bioversee. Now, I’m diving into exciting projects with clients, building an interactive web application for industrial PLC control systems—and loving every minute of the challenge."
+                backContent="Work in progress ..."
               />
             </div>
             {/* <div className="infoContainer"></div> */}
