@@ -33,7 +33,7 @@ const InfoCard: React.FC<InfoCardProps> = ({
           <img id="image" src={imagePath} alt={title} />
           <h3 id="subtitle">{subtitle}</h3>
           <p id="text">{content}</p>
-          <p className="showMore">Click for more ...</p>
+          {/* <p className="showMore">Click for more ...</p> */}
         </div>
         <div className="infoCardBack">
           <p id="text">{backContent}</p>
