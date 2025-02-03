@@ -1,0 +1,157 @@
+.testPage {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  background-color: #f5f5f5;
+}
+
+/* ----------------------------------- */
+/**Menu button CSSS  (Hamburger menu) **/
+/* ----------------------------------- */
+.centerContainer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  z-index: 2;
+  border-radius: 50%;
+  width: 75px;
+  height: 75px;
+  cursor: pointer;
+  position: relative;
+  border: 40px solid #595b6e;
+}
+
+.menuLine {
+  position: absolute;
+  z-index: 3;
+  height: 5px;
+  width: 55px;
+  background-color: white;
+  transition: transform 0.3s ease;
+}
+
+.menuLine1,
+.menuLine2,
+.menuLine3,
+.menuLine4 {
+  transform: rotate(0deg);
+}
+
+.centerContainer.clicked .menuLine1 {
+  transform: rotate(45deg);
+  transition-delay: 0.6s;
+}
+
+.centerContainer.clicked .menuLine2 {
+  transform: rotate(-45deg);
+  transition-delay: 0.6s;
+}
+
+.centerContainer.clicked .menuLine3 {
+  transform: rotate(90deg);
+  transition-delay: 0.3s;
+}
+
+.centerContainer.clicked .menuLine4 {
+  transform: rotate(-90deg);
+  transition-delay: 0.3s;
+}
+/* ----------------------------------- */
+/* ----------------------------------- */
+
+/* ----------------------------------- */
+/**Info button CSSS  (Hamburger menu) **/
+/* ----------------------------------- */
+
+.infoBubble {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  z-index: 1;
+  border-radius: 50%;
+  width: 75px;
+  height: 75px;
+  cursor: pointer;
+  position: absolute;
+  transition: transform 0.3s ease;
+}
+
+.infoBubble1,
+.infoBubble2,
+.infoBubble3,
+.infoBubble4,
+.infoBubble5,
+.infoBubble6,
+.infoBubble7,
+.infoBubble8,
+.infoBubble9,
+.infoBubble10,
+.infoBubble11 {
+  background-color: teal;
+  transform: translate(0, 0);
+}
+
+/* head and body */
+.centerContainer.clicked ~ .infoBubble1 {
+  transform: translate(0px, -200px);
+  transition-delay: 0.6s;
+}
+
+.centerContainer.clicked ~ .infoBubble2 {
+  transform: translate(0px, -100px);
+  transition-delay: 0.3s;
+}
+
+.centerContainer.clicked ~ .infoBubble3 {
+  transform: translate(0px, 100px);
+  transition-delay: 0.3s;
+}
+
+/* arms */
+.centerContainer.clicked ~ .infoBubble4 {
+  transform: translate(90px, -70px);
+  transition-delay: 0.6s;
+}
+
+.centerContainer.clicked ~ .infoBubble5 {
+  transform: translate(-90px, -70px);
+  transition-delay: 0.6s;
+}
+
+.centerContainer.clicked ~ .infoBubble6 {
+  transform: translate(150px, 10px);
+  transition-delay: 0.9s;
+}
+
+.centerContainer.clicked ~ .infoBubble7 {
+  transform: translate(-150px, 10px);
+  transition-delay: 0.9s;
+}
+
+/* legs */
+.centerContainer.clicked ~ .infoBubble8 {
+  transform: translate(80px, 170px);
+  transition-delay: 0.6s;
+}
+
+.centerContainer.clicked ~ .infoBubble9 {
+  transform: translate(-80px, 170px);
+  transition-delay: 0.6s;
+}
+
+.centerContainer.clicked ~ .infoBubble10 {
+  transform: translate(80px, 270px);
+  transition-delay: 0.9s;
+}
+
+.centerContainer.clicked ~ .infoBubble11 {
+  transform: translate(-80px, 270px);
+  transition-delay: 0.9s;
+}
+
+/* ----------------------------------- */
+/* ----------------------------------- */

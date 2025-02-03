@@ -1,6 +1,7 @@
 import { BrowserRouter, Navigate, Route, Routes } from "react-router-dom";
 import "./App.css";
-import Portfolio from "./pages/Portfolio"; // Corrected the typo in the import statement
+import Portfolio from "./pages/Portfolio";
+import Testpage from "./pages/Testing";
 
 function App() {
   return (
@@ -10,6 +11,7 @@ function App() {
           <Routes>
             <Route path="/" element={<Portfolio />} />
             <Route path="*" element={<Navigate to="/" />} />
+            <Route path="/test" element={<Testpage />} />
           </Routes>
         </div>
       </BrowserRouter>
