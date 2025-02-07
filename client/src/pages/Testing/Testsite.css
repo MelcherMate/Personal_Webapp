@@ -95,6 +95,13 @@
   transform: translate(0, 0);
 }
 
+.infoBubble svg {
+  width: 40px;
+  height: 40px;
+  background: none;
+  fill: white;
+}
+
 /* head and body */
 .centerContainer.clicked ~ .infoBubble1 {
   transform: translate(0px, -200px);
@@ -153,5 +160,67 @@
   transition-delay: 0.9s;
 }
 
-/* ----------------------------------- */
-/* ----------------------------------- */
+/* Popup styles */
+.popup {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 350px;
+  height: 450px;
+  border-radius: 24px;
+  background-color: white;
+  z-index: 1000;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  animation: genieOpenFromCenter 0.5s cubic-bezier(0.5, 1.5, 0.5, 1);
+}
+
+@keyframes genieOpenFromCenter {
+  0% {
+    transform: translate(-50%, -50%) scale(0.1);
+    width: 0;
+    transform-origin: center center;
+  }
+  100% {
+    transform: translate(-50%, -50%) scale(1);
+    width: 350px;
+    transform-origin: center center;
+  }
+}
+
+@keyframes genieCloseFromCenter {
+  0% {
+    transform: translate(-50%, -50%) scale(1);
+    width: 350px;
+    transform-origin: center center;
+  }
+  100% {
+    transform: translate(-50%, -50%) scale(0.1);
+    width: 0;
+    transform-origin: center center;
+  }
+}
+
+.popupClosing {
+  animation: genieCloseFromCenter 0.5s cubic-bezier(0.5, 1.5, 0.5, 1);
+}
+
+.popupContent {
+  padding: 20px;
+  text-align: center;
+  background-color: white;
+}
+
+/* .popupClose {
+  position: absolute;
+  top: 10px;
+  right: 20px;
+  cursor: pointer;
+  font-size: 30px;
+  font-weight: bold;
+  background-color: white;
+} */
