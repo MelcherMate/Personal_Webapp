@@ -47,11 +47,36 @@ function Testsite() {
         <div
           className={`centerContainer ${clicked ? "clicked" : ""}`}
           onClick={handleClick}
-        >
-          <div className="menuLine menuLine1"></div>
-          <div className="menuLine menuLine2"></div>
-          <div className="menuLine menuLine3"></div>
-          <div className="menuLine menuLine4"></div>
+        ></div>
+        <div className="orbit mercury-orbit">
+          <div className="planet mercury"></div>
+        </div>
+        <div className="orbit venus-orbit">
+          <div className="planet venus"></div>
+        </div>
+        <div className="orbit earth-orbit">
+          <div className="planet earth">
+            <div className="moon-orbit">
+              <div className="moon"></div>
+            </div>
+          </div>
+        </div>
+        <div className="orbit mars-orbit">
+          <div className="planet mars"></div>
+        </div>
+        <div className="orbit jupiter-orbit">
+          <div className="planet jupiter"></div>
+        </div>
+        <div className="orbit saturn-orbit">
+          <div className="planet saturn">
+            <div className="saturn-rings"></div>
+          </div>
+        </div>
+        <div className="orbit uranus-orbit">
+          <div className="planet uranus"></div>
+        </div>
+        <div className="orbit neptune-orbit">
+          <div className="planet neptune"></div>
         </div>
         <div
           className="infoBubble infoBubble1"

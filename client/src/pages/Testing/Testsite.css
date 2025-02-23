@@ -12,17 +12,204 @@
 /**Menu button CSSS  (Hamburger menu) **/
 /* ----------------------------------- */
 .centerContainer {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  z-index: 2;
-  border-radius: 50%;
-  width: 75px;
-  height: 75px;
-  cursor: pointer;
-  position: relative;
+  position: absolute;
+  z-index: 1000;
+  top: 50%;
+  left: 50%;
+  width: 100px;
+  height: 100px;
   background-color: #ebbf63;
+  box-shadow: 0 0 50px #c90;
+  border-radius: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.orbit {
+  position: absolute;
+  border-radius: 50%;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: transparent;
+  animation-timing-function: linear;
+  animation-iteration-count: infinite;
+}
+
+.mercury-orbit {
+  width: 120px;
+  height: 120px;
+  animation-duration: 2.89016s;
+  animation-name: rotateOrbit;
+}
+
+.venus-orbit {
+  width: 150px;
+  height: 150px;
+  animation-duration: 7.38237s;
+  animation-name: rotateOrbit;
+}
+
+.earth-orbit {
+  width: 215px;
+  height: 215px;
+  animation-duration: 12.00021s;
+  animation-name: rotateOrbit;
+}
+
+.moon-orbit {
+  position: absolute;
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: transparent;
+  animation-duration: 0.89764s;
+  animation-name: rotateOrbit;
+  animation-timing-function: linear;
+  animation-iteration-count: infinite;
+}
+
+.mars-orbit {
+  width: 290px;
+  height: 290px;
+  animation-duration: 22.57017s;
+  animation-name: rotateOrbit;
+}
+
+.jupiter-orbit {
+  width: 450px;
+  height: 450px;
+  animation-duration: 142.35138s;
+  animation-name: rotateOrbit;
+}
+
+.saturn-orbit {
+  width: 680px;
+  height: 680px;
+  animation-duration: 353.36998s;
+  animation-name: rotateOrbit;
+}
+
+.uranus-orbit {
+  width: 850px;
+  height: 850px;
+  animation-duration: 1008.20215s;
+  animation-name: rotateOrbit;
+}
+
+.neptune-orbit {
+  width: 1000px;
+  height: 1000px;
+  animation-duration: 1977.49584s;
+  animation-name: rotateOrbit;
+}
+
+.planet {
+  position: absolute;
+  border-radius: 50%;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.mercury {
+  width: 10px;
+  height: 10px;
+  background-color: gray;
+  top: -5px;
+  background: radial-gradient(circle, #888, #555);
+}
+
+.venus {
+  width: 15px;
+  height: 15px;
+  background-color: orange;
+  top: -8px;
+  background: radial-gradient(circle, #f9c26b, #e67e22);
+}
+
+.earth {
+  width: 18px;
+  height: 18px;
+  background-color: blue;
+  top: -9px;
+  background: radial-gradient(circle, #89cff0, #006494);
+}
+
+.moon {
+  position: absolute;
+  width: 5px;
+  height: 5px;
+  background-color: lightgray;
+  border-radius: 50%;
+  top: -3px;
+  left: 50%;
+  transform: translateX(-50%);
+  background: radial-gradient(circle, #ddd, #aaa);
+}
+
+.mars {
+  width: 12px;
+  height: 12px;
+  background-color: red;
+  top: -6.5px;
+  background: radial-gradient(circle, #e57373, #d32f2f);
+}
+
+.jupiter {
+  width: 90px;
+  height: 90px;
+  background-color: rgb(189, 137, 72);
+  top: -40px;
+  background: linear-gradient(to bottom, #d2b48c, #a0522d, #8b4513);
+}
+
+.saturn {
+  z-index: 2;
+  width: 50px;
+  height: 50px;
+  background: linear-gradient(to bottom, #f5f5dc, #e0c2a3, #d2b48c);
+  top: -25px;
+}
+
+.saturn-rings {
+  position: absolute;
+  background: none;
+  z-index: 1;
+  border-radius: 50%;
+  height: 85px;
+  width: 85px;
+  transform: translate(-50%, -50%);
+  border: 12px solid rgba(204, 174, 130, 0.5);
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.uranus {
+  width: 35px;
+  height: 35px;
+  background: radial-gradient(circle, #add8e6, #87ceeb);
+  top: -17px;
+}
+
+.neptune {
+  width: 32px;
+  height: 32px;
+  background: radial-gradient(circle, #4682b4, #000080);
+  top: -16px;
+}
+
+@keyframes rotateOrbit {
+  from {
+    transform: translate(-50%, -50%) rotate(0deg);
+  }
+  to {
+    transform: translate(-50%, -50%) rotate(360deg);
+  }
 }
 
 .menuLine {
