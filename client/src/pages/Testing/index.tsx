@@ -1,30 +1,18 @@
 import { useEffect, useState } from "react";
-import "react-icons";
-import {
-  FaAndroid,
-  FaApple,
-  FaBeer,
-  FaBicycle,
-  FaBus,
-  FaCar,
-  FaCoffee,
-  FaPlane,
-  FaRocket,
-  FaShip,
-  FaTrain,
-} from "react-icons/fa";
 import "./Testsite.css";
 
 function Testsite() {
   const [clicked, setClicked] = useState(false);
-  const [popupContent, setPopupContent] = useState<string | null>(null);
+  const [popupContent, setPopupContent] = useState<React.ReactNode | null>(
+    null
+  );
   const [closing, setClosing] = useState(false);
 
   const handleClick = () => {
     setClicked(!clicked);
   };
 
-  const handleBubbleClick = (content: string) => {
+  const handleBubbleClick = (content: React.ReactNode) => {
     setPopupContent(content);
     setClosing(false);
   };
@@ -53,20 +41,6 @@ function Testsite() {
     };
   }, [popupContent]);
 
-  const icons = [
-    <FaBeer />,
-    <FaCoffee />,
-    <FaApple />,
-    <FaAndroid />,
-    <FaCar />,
-    <FaBicycle />,
-    <FaBus />,
-    <FaTrain />,
-    <FaPlane />,
-    <FaShip />,
-    <FaRocket />,
-  ];
-
   return (
     <>
       <main className="testPage">
@@ -79,20 +53,52 @@ function Testsite() {
           <div className="menuLine menuLine3"></div>
           <div className="menuLine menuLine4"></div>
         </div>
-        {[...Array(11)].map((_, index) => (
-          <div
-            key={index}
-            className={`infoBubble infoBubble${index + 1}`}
-            onClick={() => handleBubbleClick(`Content for bubble ${index + 1}`)}
-          >
-            {icons[index]}
-          </div>
-        ))}
+        <div
+          className="infoBubble infoBubble1"
+          onClick={() => handleBubbleClick("Content for bubble 1")}
+        ></div>
+        <div
+          className="infoBubble infoBubble2"
+          onClick={() => handleBubbleClick("Content for bubble 2")}
+        ></div>
+        <div
+          className="infoBubble infoBubble3"
+          onClick={() => handleBubbleClick("Content for bubble 3")}
+        ></div>
+        <div
+          className="infoBubble infoBubble4"
+          onClick={() => handleBubbleClick("Content for bubble 4")}
+        ></div>
+        <div
+          className="infoBubble infoBubble5"
+          onClick={() => handleBubbleClick("Content for bubble 5")}
+        ></div>
+        <div
+          className="infoBubble infoBubble6"
+          onClick={() => handleBubbleClick("Content for bubble 6")}
+        ></div>
+        <div
+          className="infoBubble infoBubble7"
+          onClick={() => handleBubbleClick("Content for bubble 7")}
+        ></div>
+        <div
+          className="infoBubble infoBubble8"
+          onClick={() => handleBubbleClick("Content for bubble 8")}
+        ></div>
+        <div
+          className="infoBubble infoBubble9"
+          onClick={() => handleBubbleClick("Content for bubble 9")}
+        ></div>
+        <div
+          className="infoBubble infoBubble10"
+          onClick={() => handleBubbleClick("Content for bubble 10")}
+        ></div>
+        <div
+          className="infoBubble infoBubble11"
+          onClick={() => handleBubbleClick("Content for bubble 11")}
+        ></div>
         {popupContent && (
           <div className={`popup ${closing ? "popupClosing" : ""}`}>
-            {/* <div className="popupClose" onClick={handleClosePopup}>
-              &times;
-            </div> */}
             <div className="popupContent">{popupContent}</div>
           </div>
         )}

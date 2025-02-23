@@ -4,7 +4,8 @@
   align-items: center;
   justify-content: center;
   height: 100vh;
-  background-color: #f5f5f5;
+  /* background-color: #f5f5f5; */
+  background-color: #080e23;
 }
 
 /* ----------------------------------- */
@@ -21,7 +22,7 @@
   height: 75px;
   cursor: pointer;
   position: relative;
-  border: 40px solid #595b6e;
+  background-color: #ebbf63;
 }
 
 .menuLine {
@@ -29,8 +30,8 @@
   z-index: 3;
   height: 5px;
   width: 55px;
-  background-color: white;
-  transition: transform 0.3s ease;
+  background-color: #ebbf63;
+  transition: transform 0.3s ease, background-color 0.3s ease;
 }
 
 .menuLine1,
@@ -43,21 +44,25 @@
 .centerContainer.clicked .menuLine1 {
   transform: rotate(45deg);
   transition-delay: 0.6s;
+  background-color: white;
 }
 
 .centerContainer.clicked .menuLine2 {
   transform: rotate(-45deg);
   transition-delay: 0.6s;
+  background-color: white;
 }
 
 .centerContainer.clicked .menuLine3 {
   transform: rotate(90deg);
   transition-delay: 0.3s;
+  background-color: white;
 }
 
 .centerContainer.clicked .menuLine4 {
   transform: rotate(-90deg);
   transition-delay: 0.3s;
+  background-color: white;
 }
 /* ----------------------------------- */
 /* ----------------------------------- */
