@@ -6,6 +6,7 @@
   height: 100vh;
   background-color: #080e23;
   position: relative;
+  overflow: hidden;
 }
 
 /* ----------------------------------- */
@@ -44,8 +45,8 @@
 }
 
 .centerContainer.clicked ~ .orbit {
-  width: 10000px;
-  height: 10000px;
+  width: 1000px;
+  height: 1000px;
 }
 
 .mercury-orbit {
