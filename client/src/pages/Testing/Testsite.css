@@ -173,22 +173,22 @@
 }
 
 .jupiter {
-  width: 90px;
-  height: 90px;
+  width: 80px;
+  height: 80px;
   background-color: rgb(189, 137, 72);
-  top: -40px;
+  top: -36px;
   background: linear-gradient(to bottom, #d2b48c, #a0522d, #8b4513);
 }
 
 .saturn {
   z-index: 2;
-  width: 50px;
-  height: 50px;
+  width: 42px;
+  height: 42px;
   background: linear-gradient(to bottom, #f5f5dc, #e0c2a3, #d2b48c);
-  top: -25px;
+  top: -21px;
 }
 
-.saturn-rings {
+.saturn-ring1 {
   position: absolute;
   background: none;
   z-index: 1;
@@ -196,7 +196,21 @@
   height: 85px;
   width: 85px;
   transform: translate(-50%, -50%);
-  border: 12px solid rgba(204, 174, 130, 0.5);
+  border: 15px solid rgba(185, 154, 107, 0.5);
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.saturn-ring2 {
+  position: absolute;
+  background: none;
+  z-index: 1;
+  border-radius: 50%;
+  height: 95px;
+  width: 95px;
+  transform: translate(-50%, -50%);
+  border: 2px solid rgba(187, 168, 140, 0.5);
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);

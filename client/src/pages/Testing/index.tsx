@@ -69,7 +69,8 @@ function Testsite() {
         </div>
         <div className="orbit saturn-orbit">
           <div className="planet saturn">
-            <div className="saturn-rings"></div>
+            <div className="saturn-ring1"></div>
+            <div className="saturn-ring2"></div>
           </div>
         </div>
         <div className="orbit uranus-orbit">
