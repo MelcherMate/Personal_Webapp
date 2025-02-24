@@ -3,7 +3,7 @@ import profNoBg from "../../../public/img/profNoBg.png";
 import udLogoWhite from "../../../public/img/udLogoWhite.png";
 import ResumeENG from "../../../public/pdf/ResumeENG.pdf";
 import InfoCard from "../../components/infoCard";
-import "./Portfolio.css";
+// import "./Portfolio.css";
 
 function Portfolio() {
   return (
