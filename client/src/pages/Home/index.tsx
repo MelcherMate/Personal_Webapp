@@ -44,7 +44,7 @@ function Home() {
 
   return (
     <>
-      <main className="testPage">
+      <main>
         <div
           className={`centerContainer ${clicked ? "clicked" : ""}`}
           onClick={handleClick}
