@@ -21,7 +21,7 @@ function Testsite() {
     setClosing(true);
     setTimeout(() => {
       setPopupContent(null);
-    }, 500); // Match the duration of the closing animation
+    }, 500);
   };
 
   const handleOutsideClick = (event: MouseEvent) => {
@@ -39,6 +39,7 @@ function Testsite() {
     return () => {
       document.removeEventListener("click", handleOutsideClick);
     };
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [popupContent]);
 
   return (
