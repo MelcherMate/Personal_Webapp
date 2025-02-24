@@ -1,7 +1,7 @@
 import { useEffect, useState } from "react";
-import "./Portfolio.css";
+import "./Home.css";
 
-function Testsite() {
+function Home() {
   const [clicked, setClicked] = useState(false);
   const [popupContent, setPopupContent] = useState<React.ReactNode | null>(
     null
@@ -134,4 +134,4 @@ function Testsite() {
   );
 }
 
-export default Testsite;
+export default Home;

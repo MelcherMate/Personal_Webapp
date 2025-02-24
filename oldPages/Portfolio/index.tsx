@@ -2,7 +2,7 @@ import bvLogo from "../../../public/img/bvLogo.png";
 import profNoBg from "../../../public/img/profNoBg.png";
 import udLogoWhite from "../../../public/img/udLogoWhite.png";
 import ResumeENG from "../../../public/pdf/ResumeENG.pdf";
-import InfoCard from "../../components/infoCard";
+import InfoCard from "../../client/src/components/infoCard";
 // import "./Portfolio.css";
 
 function Portfolio() {

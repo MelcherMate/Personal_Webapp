@@ -1,6 +1,6 @@
 import { BrowserRouter, Navigate, Route, Routes } from "react-router-dom";
 import "./App.css";
-import Portfolio from "./pages/Portfolio";
+import Home from "./pages/Home";
 import Testpage from "./pages/Testing";
 
 function App() {
@@ -9,7 +9,7 @@ function App() {
       <BrowserRouter>
         <div className="appContainer">
           <Routes>
-            <Route path="/" element={<Portfolio />} />
+            <Route path="/" element={<Home />} />
             <Route path="*" element={<Navigate to="/" />} />
             <Route path="/test" element={<Testpage />} />
           </Routes>
