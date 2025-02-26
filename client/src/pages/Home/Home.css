@@ -4,7 +4,8 @@ main {
   align-items: center;
   justify-content: center;
   height: 100vh;
-  background-color: #080e23;
+  color: #fff;
+  background: radial-gradient(ellipse at bottom, #052144 0%, #050608 100%);
   position: relative;
   overflow: hidden;
 }
@@ -12,13 +13,13 @@ main {
 /* ----------------------------------- */
 /************* Solar System ************/
 /* ----------------------------------- */
-.centerContainer {
+.sun {
   position: absolute;
   z-index: 1000;
   top: 50%;
   left: 50%;
-  width: 100px;
-  height: 100px;
+  width: 82px;
+  height: 82px;
   background-color: #ebbf63;
   box-shadow: 0 0 50px #c90;
   border-radius: 50%;
@@ -26,7 +27,7 @@ main {
   transition: width 0.5s ease, height 0.5s ease;
 }
 
-.centerContainer.clicked {
+.sun.clicked {
   width: 75px;
   height: 75px;
 }
@@ -48,37 +49,37 @@ main {
   transition: width 0.5s ease, height 0.5s ease, opacity 0.5s ease;
 }
 
-.centerContainer.clicked ~ .orbit {
-  width: 1000px;
-  height: 1000px;
+.sun.clicked ~ .orbit {
+  width: 600px;
+  height: 780px;
   opacity: 0;
 }
 
 .mercury-orbit {
-  width: 120px;
-  height: 120px;
+  width: 100px;
+  height: 100px;
   animation-duration: 2.89016s;
   animation-name: rotateOrbit;
 }
 
 .venus-orbit {
-  width: 150px;
-  height: 150px;
+  width: 130px;
+  height: 130px;
   animation-duration: 7.38237s;
   animation-name: rotateOrbit;
 }
 
 .earth-orbit {
-  width: 215px;
-  height: 215px;
+  width: 180px;
+  height: 180px;
   animation-duration: 12.00021s;
   animation-name: rotateOrbit;
 }
 
 .moon-orbit {
   position: absolute;
-  width: 30px;
-  height: 30px;
+  width: 27.5px;
+  height: 27.5px;
   border-radius: 50%;
   border: 1px solid rgba(255, 255, 255, 0.2);
   top: 50%;
@@ -92,36 +93,36 @@ main {
 }
 
 .mars-orbit {
-  width: 290px;
-  height: 290px;
+  width: 250px;
+  height: 250px;
   animation-duration: 22.57017s;
   animation-name: rotateOrbit;
 }
 
 .jupiter-orbit {
-  width: 450px;
-  height: 450px;
+  width: 420px;
+  height: 420px;
   animation-duration: 142.35138s;
   animation-name: rotateOrbit;
 }
 
 .saturn-orbit {
-  width: 680px;
-  height: 680px;
+  width: 580px;
+  height: 580px;
   animation-duration: 353.36998s;
   animation-name: rotateOrbit;
 }
 
 .uranus-orbit {
-  width: 850px;
-  height: 850px;
+  width: 700px;
+  height: 700px;
   animation-duration: 1008.20215s;
   animation-name: rotateOrbit;
 }
 
 .neptune-orbit {
-  width: 1000px;
-  height: 1000px;
+  width: 780px;
+  height: 780px;
   animation-duration: 1977.49584s;
   animation-name: rotateOrbit;
 }
@@ -137,29 +138,29 @@ main {
   transition: opacity 0.5s ease;
 }
 
-.centerContainer.clicked ~ .orbit {
+.sun.clicked ~ .orbit {
   opacity: 0;
 }
 
 .mercury {
-  width: 10px;
-  height: 10px;
+  width: 9px;
+  height: 9px;
   background-color: gray;
   top: -5px;
   background: radial-gradient(circle, #888, #555);
 }
 
 .venus {
-  width: 15px;
-  height: 15px;
+  width: 13px;
+  height: 13px;
   background-color: orange;
-  top: -8px;
+  top: -7px;
   background: radial-gradient(circle, #f9c26b, #e67e22);
 }
 
 .earth {
-  width: 18px;
-  height: 18px;
+  width: 15px;
+  height: 15px;
   background-color: blue;
   top: -9px;
   background: radial-gradient(circle, #89cff0, #006494);
@@ -167,38 +168,38 @@ main {
 
 .moon {
   position: absolute;
-  width: 5px;
-  height: 5px;
+  width: 4px;
+  height: 4px;
   background-color: lightgray;
   border-radius: 50%;
-  top: -3px;
+  top: -2.5px;
   left: 50%;
   transform: translateX(-50%);
   background: radial-gradient(circle, #ddd, #aaa);
 }
 
 .mars {
-  width: 12px;
-  height: 12px;
+  width: 10px;
+  height: 10px;
   background-color: red;
   top: -6.5px;
   background: radial-gradient(circle, #e57373, #d32f2f);
 }
 
 .jupiter {
-  width: 80px;
-  height: 80px;
+  width: 70px;
+  height: 70px;
   background-color: rgb(189, 137, 72);
-  top: -36px;
+  top: -32px;
   background: linear-gradient(to bottom, #d2b48c, #a0522d, #8b4513);
 }
 
 .saturn {
   z-index: 2;
-  width: 42px;
-  height: 42px;
+  width: 35px;
+  height: 35px;
   background: linear-gradient(to bottom, #f5f5dc, #e0c2a3, #d2b48c);
-  top: -21px;
+  top: -18px;
 }
 
 .saturn-ring1 {
@@ -206,10 +207,10 @@ main {
   background: none;
   z-index: 1;
   border-radius: 50%;
-  height: 85px;
-  width: 85px;
+  height: 70px;
+  width: 70px;
   transform: translate(-50%, -50%);
-  border: 15px solid rgba(185, 154, 107, 0.5);
+  border: 12px solid rgba(185, 154, 107, 0.5);
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
@@ -220,8 +221,8 @@ main {
   background: none;
   z-index: 1;
   border-radius: 50%;
-  height: 95px;
-  width: 95px;
+  height: 80px;
+  width: 80px;
   transform: translate(-50%, -50%);
   border: 2px solid rgba(187, 168, 140, 0.5);
   top: 50%;
@@ -230,17 +231,17 @@ main {
 }
 
 .uranus {
-  width: 35px;
-  height: 35px;
+  width: 25px;
+  height: 25px;
   background: radial-gradient(circle, #add8e6, #87ceeb);
-  top: -17px;
+  top: -13px;
 }
 
 .neptune {
-  width: 32px;
-  height: 32px;
+  width: 22px;
+  height: 22px;
   background: radial-gradient(circle, #4682b4, #000080);
-  top: -16px;
+  top: -12px;
 }
 
 @keyframes rotateOrbit {
@@ -260,8 +261,8 @@ main {
 /* ----------------------------------- */
 
 .infoBubble {
+  position: absolute;
   display: flex;
-  flex-direction: column;
   align-items: center;
   justify-content: center;
   z-index: 1;
@@ -269,137 +270,107 @@ main {
   width: 75px;
   height: 75px;
   cursor: pointer;
-  position: absolute;
+  background-color: teal;
   transition: transform 0.3s ease;
 }
 
-.infoBubble1,
-.infoBubble2,
-.infoBubble3,
-.infoBubble4,
-.infoBubble5,
-.infoBubble6,
-.infoBubble7,
-.infoBubble8,
-.infoBubble9,
-.infoBubble10,
-.infoBubble11 {
-  background-color: teal;
-  transform: translate(0, 0);
-}
-
 /* head and body */
-.centerContainer.clicked ~ .infoBubble1 {
+.sun.clicked ~ .infoBubble1 {
   transform: translate(0px, -200px);
   transition-delay: 0.6s;
 }
 
-.centerContainer.clicked ~ .infoBubble2 {
+.sun.clicked ~ .infoBubble2 {
   transform: translate(0px, -100px);
   transition-delay: 0.3s;
 }
 
-.centerContainer.clicked ~ .infoBubble3 {
+.sun.clicked ~ .infoBubble3 {
   transform: translate(0px, 100px);
   transition-delay: 0.3s;
 }
 
 /* arms */
-.centerContainer.clicked ~ .infoBubble4 {
+.sun.clicked ~ .infoBubble4 {
   transform: translate(90px, -70px);
   transition-delay: 0.6s;
 }
 
-.centerContainer.clicked ~ .infoBubble5 {
+.sun.clicked ~ .infoBubble5 {
   transform: translate(-90px, -70px);
   transition-delay: 0.6s;
 }
 
-.centerContainer.clicked ~ .infoBubble6 {
+.sun.clicked ~ .infoBubble6 {
   transform: translate(150px, 10px);
   transition-delay: 0.9s;
 }
 
-.centerContainer.clicked ~ .infoBubble7 {
+.sun.clicked ~ .infoBubble7 {
   transform: translate(-150px, 10px);
   transition-delay: 0.9s;
 }
 
 /* legs */
-.centerContainer.clicked ~ .infoBubble8 {
+.sun.clicked ~ .infoBubble8 {
   transform: translate(80px, 170px);
   transition-delay: 0.6s;
 }
 
-.centerContainer.clicked ~ .infoBubble9 {
+.sun.clicked ~ .infoBubble9 {
   transform: translate(-80px, 170px);
   transition-delay: 0.6s;
 }
 
-.centerContainer.clicked ~ .infoBubble10 {
+.sun.clicked ~ .infoBubble10 {
   transform: translate(80px, 270px);
   transition-delay: 0.9s;
 }
 
-.centerContainer.clicked ~ .infoBubble11 {
+.sun.clicked ~ .infoBubble11 {
   transform: translate(-80px, 270px);
   transition-delay: 0.9s;
 }
 
 /* ----------------------------------- */
-/************** Popup Box **************/
 /* ----------------------------------- */
 
-.popup {
-  position: fixed;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  width: 350px;
-  height: 450px;
-  border-radius: 24px;
-  background-color: white;
-  z-index: 1000;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-  animation: genieOpenFromCenter 0.5s cubic-bezier(0.5, 1.5, 0.5, 1);
+/* ----------------------------------- */
+/************* Bubble Info *************/
+/* ----------------------------------- */
+
+.infoBubble1.clicked {
 }
 
-@keyframes genieOpenFromCenter {
-  0% {
-    transform: translate(-50%, -50%) scale(0.1);
-    width: 0;
-    transform-origin: center center;
-  }
-  100% {
-    transform: translate(-50%, -50%) scale(1);
-    width: 350px;
-    transform-origin: center center;
-  }
+.infoBubble1.clicked ~ .infoBubble2 {
 }
 
-@keyframes genieCloseFromCenter {
-  0% {
-    transform: translate(-50%, -50%) scale(1);
-    width: 350px;
-    transform-origin: center center;
-  }
-  100% {
-    transform: translate(-50%, -50%) scale(0.1);
-    width: 0;
-    transform-origin: center center;
-  }
+.infoBubble1.clicked ~ .infoBubble3 {
 }
 
-.popupClosing {
-  animation: genieCloseFromCenter 0.5s cubic-bezier(0.5, 1.5, 0.5, 1);
+.infoBubble1.clicked ~ .infoBubble4 {
 }
 
-.popupContent {
-  padding: 20px;
-  text-align: center;
-  background-color: white;
+.infoBubble1.clicked ~ .infoBubble5 {
 }
+
+.infoBubble1.clicked ~ .infoBubble6 {
+}
+
+.infoBubble1.clicked ~ .infoBubble7 {
+}
+
+.infoBubble1.clicked ~ .infoBubble8 {
+}
+
+.infoBubble1.clicked ~ .infoBubble9 {
+}
+
+.infoBubble1.clicked ~ .infoBubble10 {
+}
+
+.infoBubble1.clicked ~ .infoBubbl11 {
+}
+
+/* ----------------------------------- */
+/* ----------------------------------- */
