@@ -71,6 +71,7 @@ const Home = () => {
       <div className={`infoBubble infoBubble7`}>
         <div className="infoBubbleContent infoBubbleContent7">Skiing</div>
       </div>
+      <div className="hoverText">Click on the Sun!</div>
     </main>
   );
 };

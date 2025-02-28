@@ -20,8 +20,8 @@ main {
   left: 50%;
   width: 82px;
   height: 82px;
-  background-color: #ebbf63;
-  box-shadow: 0 0 50px #c90;
+  background-color: #fdb813;
+  box-shadow: 0 0 60px #f39c12, 0 0 100px #e67e22;
   border-radius: 50%;
   justify-content: center;
   align-items: center;
@@ -35,8 +35,8 @@ main {
   width: 200px;
   height: 120px;
   border-radius: 12px;
-  background-color: #ebc06394;
-  box-shadow: 0 0 0px;
+  background-color: #e3a724b7;
+  box-shadow: none;
 }
 
 .sunContent {
@@ -170,60 +170,66 @@ main {
 .mercury {
   width: 9px;
   height: 9px;
-  background-color: gray;
+  background-color: #6e6e6e;
   top: -5px;
-  background: radial-gradient(circle, #888, #555);
+  background: radial-gradient(circle, #7d7d7d, #4c4c4c);
 }
 
 .venus {
   width: 13px;
   height: 13px;
-  background-color: orange;
+  background-color: #d69c44;
   top: -7px;
-  background: radial-gradient(circle, #f9c26b, #e67e22);
+  background: radial-gradient(circle, #f6b730, #e37d2f);
 }
 
 .earth {
   width: 15px;
   height: 15px;
-  background-color: blue;
+  background-color: #4a90e2;
   top: -9px;
-  background: radial-gradient(circle, #89cff0, #006494);
+  background: radial-gradient(circle, #7ec8f3, #006494);
 }
 
 .moon {
   position: absolute;
   width: 4px;
   height: 4px;
-  background-color: lightgray;
+  background-color: #bbb;
   border-radius: 50%;
   top: -2.5px;
   left: 50%;
   transform: translateX(-50%);
-  background: radial-gradient(circle, #ddd, #aaa);
+  background: radial-gradient(circle, #d1d1d1, #a1a1a1);
 }
 
 .mars {
   width: 10px;
   height: 10px;
-  background-color: red;
+  background-color: #c94f38;
   top: -6.5px;
-  background: radial-gradient(circle, #e57373, #d32f2f);
+  background: radial-gradient(circle, #e5634d, #d04b33);
 }
 
 .jupiter {
   width: 70px;
   height: 70px;
-  background-color: rgb(189, 137, 72);
+  background-color: #bb8748;
   top: -32px;
-  background: linear-gradient(to bottom, #d2b48c, #a0522d, #8b4513);
+  background: radial-gradient(
+    circle at 35% 35%,
+    #e5b08d,
+    #be8c5e,
+    #9c623c,
+    #5b3d1f
+  );
 }
 
 .saturn {
   z-index: 2;
   width: 35px;
   height: 35px;
-  background: linear-gradient(to bottom, #f5f5dc, #e0c2a3, #d2b48c);
+  background: linear-gradient(to bottom, #f1e1c6, #d4b58b, #cfa16a);
   top: -18px;
 }
 
@@ -235,10 +241,9 @@ main {
   height: 70px;
   width: 70px;
   transform: translate(-50%, -50%);
-  border: 12px solid rgba(185, 154, 107, 0.5);
+  border: 12px solid rgba(209, 178, 127, 0.6);
   top: 50%;
   left: 50%;
-  transform: translate(-50%, -50%);
 }
 
 .saturn-ring2 {
@@ -249,23 +254,22 @@ main {
   height: 80px;
   width: 80px;
   transform: translate(-50%, -50%);
-  border: 2px solid rgba(187, 168, 140, 0.5);
+  border: 2px solid rgba(218, 174, 112, 0.5);
   top: 50%;
   left: 50%;
-  transform: translate(-50%, -50%);
 }
 
 .uranus {
   width: 25px;
   height: 25px;
-  background: radial-gradient(circle, #add8e6, #87ceeb);
+  background: radial-gradient(circle, #98c9e0, #6a9fbd);
   top: -13px;
 }
 
 .neptune {
   width: 22px;
   height: 22px;
-  background: radial-gradient(circle, #4682b4, #000080);
+  background: radial-gradient(circle, #4e78a3, #0a2342);
   top: -12px;
 }
 
@@ -309,11 +313,7 @@ main {
 .infoBubble:hover {
   box-shadow: 0 0 10px rgba(255, 255, 255, 0.5),
     0 0 15px rgba(255, 255, 255, 0.4), 0 0 10px rgba(255, 255, 255, 0.3),
-    0 0 25px rgba(255, 255, 255, 0.2);
-}
-
-.infoBubble:not(:hover) {
-  box-shadow: none;
+    0 0 25px rgba(255, 255, 255, 0.2) inset;
 }
 
 /* Ensure the base size before expansion */
@@ -405,8 +405,24 @@ main {
 /* ----------------------------------- */
 
 /* ----------------------------------- */
-/************* Bubble Info *************/
+/************ Click the Sun ************/
 /* ----------------------------------- */
+
+.hoverText {
+  position: relative;
+  font-family: Cambria, Cochin, Georgia, Times, "Times New Roman", serif;
+  top: 415px;
+  font-size: 1.3rem;
+  color: white;
+  opacity: 0.8;
+  z-index: 150;
+  background: none;
+  transition: opacity 0.3s ease;
+}
+
+.sun.clicked ~ .hoverText {
+  opacity: 0;
+}
 
 /* ----------------------------------- */
 /* ----------------------------------- */
