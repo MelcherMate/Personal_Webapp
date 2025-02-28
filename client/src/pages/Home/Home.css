@@ -212,6 +212,7 @@ main {
 }
 
 .jupiter {
+  z-index: 1;
   width: 70px;
   height: 70px;
   background-color: #bb8748;
@@ -405,23 +406,47 @@ main {
 /* ----------------------------------- */
 
 /* ----------------------------------- */
-/************ Click the Sun ************/
+/************ Toast Notification *******/
 /* ----------------------------------- */
-
-.hoverText {
-  position: relative;
-  font-family: Cambria, Cochin, Georgia, Times, "Times New Roman", serif;
-  top: 415px;
-  font-size: 1.3rem;
+.toast {
+  position: fixed;
+  bottom: 20px;
+  left: 50%;
+  transform: translateX(-50%);
+  background-color: #333;
   color: white;
-  opacity: 0.8;
+  padding: 16px;
+  border-radius: 8px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+  opacity: 0;
+  transition: opacity 0.5s ease;
   z-index: 150;
-  background: none;
-  transition: opacity 0.3s ease;
 }
 
-.sun.clicked ~ .hoverText {
+.toast.show {
+  opacity: 0.8;
+}
+
+.toast.hide {
   opacity: 0;
+}
+
+.toast .progress-bar {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  height: 4px;
+  background-color: #ffd700;
+  animation: progress 5s linear forwards;
+}
+
+@keyframes progress {
+  from {
+    width: 100%;
+  }
+  to {
+    width: 0%;
+  }
 }
 
 /* ----------------------------------- */

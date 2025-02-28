@@ -1,12 +1,22 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import "./Home.css";
 
 const Home = () => {
   const [clicked, setClicked] = useState(false);
+  const [showToast, setShowToast] = useState(true);
 
   const handleClick = () => {
     setClicked(!clicked);
   };
+
+  useEffect(() => {
+    if (showToast) {
+      const timer = setTimeout(() => {
+        setShowToast(false);
+      }, 5000);
+      return () => clearTimeout(timer);
+    }
+  }, [showToast]);
 
   return (
     <main>
@@ -71,7 +81,11 @@ const Home = () => {
       <div className={`infoBubble infoBubble7`}>
         <div className="infoBubbleContent infoBubbleContent7">Skiing</div>
       </div>
-      <div className="hoverText">Click on the Sun!</div>
+
+      <div className={`toast ${showToast ? "show" : "hide"}`}>
+        Click on the Sun!
+        <div className="progress-bar"></div>
+      </div>
     </main>
   );
 };
