@@ -3,17 +3,6 @@ import "./Home.css";
 
 const Home = () => {
   const [clicked, setClicked] = useState(false);
-  const [bubble1Clicked, setBubble1Clicked] = useState(false);
-  const [bubble2Clicked, setBubble2Clicked] = useState(false);
-  const [bubble3Clicked, setBubble3Clicked] = useState(false);
-  const [bubble4Clicked, setBubble4Clicked] = useState(false);
-  const [bubble5Clicked, setBubble5Clicked] = useState(false);
-  const [bubble6Clicked, setBubble6Clicked] = useState(false);
-  const [bubble7Clicked, setBubble7Clicked] = useState(false);
-  const [bubble8Clicked, setBubble8Clicked] = useState(false);
-  const [bubble9Clicked, setBubble9Clicked] = useState(false);
-  const [bubble10Clicked, setBubble10Clicked] = useState(false);
-  const [bubble11Clicked, setBubble11Clicked] = useState(false);
 
   const handleClick = () => {
     setClicked(!clicked);
@@ -21,10 +10,9 @@ const Home = () => {
 
   return (
     <main>
-      <div
-        className={`sun ${clicked ? "clicked" : ""}`}
-        onClick={handleClick}
-      ></div>
+      <div className={`sun ${clicked ? "clicked" : ""}`} onClick={handleClick}>
+        <div className="sunContent">Welcome</div>
+      </div>
 
       <div className="orbit mercury-orbit">
         <div className="planet mercury"></div>
@@ -58,75 +46,30 @@ const Home = () => {
         <div className="planet neptune"></div>
       </div>
 
-      <div
-        className={`infoBubble infoBubble1 ${bubble1Clicked ? "clicked" : ""}`}
-        onClick={() => setBubble1Clicked(!bubble1Clicked)}
-      >
-        1
+      <div className={`infoBubble infoBubble1`}>
+        <div className="infoBubbleContent infoBubbleContent1">CV</div>
       </div>
-      <div
-        className={`infoBubble infoBubble2 ${bubble2Clicked ? "clicked" : ""}`}
-        onClick={() => setBubble2Clicked(!bubble2Clicked)}
-      >
-        2
+      <div className={`infoBubble infoBubble2`}>
+        <div className="infoBubbleContent infoBubbleContent2">
+          Bioengineering
+        </div>
       </div>
-      <div
-        className={`infoBubble infoBubble3 ${bubble3Clicked ? "clicked" : ""}`}
-        onClick={() => setBubble3Clicked(!bubble3Clicked)}
-      >
-        3
+      <div className={`infoBubble infoBubble3`}>
+        <div className="infoBubbleContent infoBubbleContent3">Economics</div>
       </div>
-      <div
-        className={`infoBubble infoBubble4 ${bubble4Clicked ? "clicked" : ""}`}
-        onClick={() => setBubble4Clicked(!bubble4Clicked)}
-      >
-        4
+      <div className={`infoBubble infoBubble4`}>
+        <div className="infoBubbleContent infoBubbleContent4">Programming</div>
       </div>
-      <div
-        className={`infoBubble infoBubble5 ${bubble5Clicked ? "clicked" : ""}`}
-        onClick={() => setBubble5Clicked(!bubble5Clicked)}
-      >
-        5
+      <div className={`infoBubble infoBubble5`}>
+        <div className="infoBubbleContent infoBubbleContent5">
+          Links to my profiles
+        </div>
       </div>
-      <div
-        className={`infoBubble infoBubble6 ${bubble6Clicked ? "clicked" : ""}`}
-        onClick={() => setBubble6Clicked(!bubble6Clicked)}
-      >
-        6
+      <div className={`infoBubble infoBubble6`}>
+        <div className="infoBubbleContent infoBubbleContent6">Windsurfing</div>
       </div>
-      <div
-        className={`infoBubble infoBubble7 ${bubble7Clicked ? "clicked" : ""}`}
-        onClick={() => setBubble7Clicked(!bubble7Clicked)}
-      >
-        7
-      </div>
-      <div
-        className={`infoBubble infoBubble8 ${bubble8Clicked ? "clicked" : ""}`}
-        onClick={() => setBubble8Clicked(!bubble8Clicked)}
-      >
-        8
-      </div>
-      <div
-        className={`infoBubble infoBubble9 ${bubble9Clicked ? "clicked" : ""}`}
-        onClick={() => setBubble9Clicked(!bubble9Clicked)}
-      >
-        9
-      </div>
-      <div
-        className={`infoBubble infoBubble10 ${
-          bubble10Clicked ? "clicked" : ""
-        }`}
-        onClick={() => setBubble10Clicked(!bubble10Clicked)}
-      >
-        10
-      </div>
-      <div
-        className={`infoBubble infoBubble11 ${
-          bubble11Clicked ? "clicked" : ""
-        }`}
-        onClick={() => setBubble11Clicked(!bubble11Clicked)}
-      >
-        11
+      <div className={`infoBubble infoBubble7`}>
+        <div className="infoBubbleContent infoBubbleContent7">Skiing</div>
       </div>
     </main>
   );

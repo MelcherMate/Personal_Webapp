@@ -15,7 +15,7 @@ main {
 /* ----------------------------------- */
 .sun {
   position: absolute;
-  z-index: 1000;
+  z-index: 100;
   top: 50%;
   left: 50%;
   width: 82px;
@@ -23,13 +23,38 @@ main {
   background-color: #ebbf63;
   box-shadow: 0 0 50px #c90;
   border-radius: 50%;
+  justify-content: center;
+  align-items: center;
   transform: translate(-50%, -50%);
-  transition: width 0.5s ease, height 0.5s ease;
+  transition: width 0.5s ease, height 0.5s ease, border-radius 0.5s ease,
+    box-shadow 0.5s ease, background-color 0.5s ease;
+  cursor: pointer;
 }
 
 .sun.clicked {
-  width: 75px;
-  height: 75px;
+  width: 200px;
+  height: 120px;
+  border-radius: 12px;
+  background-color: #ebc06394;
+  box-shadow: 0 0 0px;
+}
+
+.sunContent {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+  background: none;
+  opacity: 0;
+  transition: opacity 0.2s ease;
+  font-size: 30px;
+}
+
+.sun.clicked .sunContent {
+  opacity: 1;
+  transition-delay: 0.3s;
 }
 
 /* ----------------------------------- */
@@ -266,70 +291,114 @@ main {
   align-items: center;
   justify-content: center;
   z-index: 1;
-  border-radius: 50%;
-  width: 75px;
-  height: 75px;
+  width: 5px;
+  height: 5px;
+  border-radius: 12px;
   cursor: pointer;
-  background-color: teal;
-  transition: transform 0.3s ease;
+  background-color: rgba(56, 55, 55, 0.758);
+  transition: transform 0.6s ease, height 0.9s ease, width 0.9s ease,
+    border-radius 0.3s ease;
 }
 
-/* head and body */
+.infoBubbleContent {
+  opacity: 0;
+  background: none;
+  transition: opacity 0.3s ease;
+}
+
+.infoBubble:hover {
+  box-shadow: 0 0 10px rgba(255, 255, 255, 0.5),
+    0 0 15px rgba(255, 255, 255, 0.4), 0 0 10px rgba(255, 255, 255, 0.3),
+    0 0 25px rgba(255, 255, 255, 0.2);
+}
+
+.infoBubble:not(:hover) {
+  box-shadow: none;
+}
+
+/* Ensure the base size before expansion */
+.sun ~ .infoBubble {
+  height: 5px;
+  width: 5px;
+  border-radius: 50%;
+  transform: translate(0px, 0px);
+}
+
+/* Enable text visibility after expansion */
+.sun.clicked ~ .infoBubble .infoBubbleContent {
+  opacity: 1;
+  transition-delay: 1.8s;
+}
+
+/* Adjust transition-delay properly */
 .sun.clicked ~ .infoBubble1 {
+  height: 240px;
+  width: 200px;
+  border-radius: 12px;
   transform: translate(0px, -200px);
+  transition: transform 0.6s ease, height 0.9s ease, width 0.9s ease,
+    border-radius 0.3s ease;
   transition-delay: 0.6s;
 }
 
 .sun.clicked ~ .infoBubble2 {
-  transform: translate(0px, -100px);
-  transition-delay: 0.3s;
+  height: 300px;
+  width: 240px;
+  border-radius: 12px;
+  transform: translate(-240px, -170px);
+  transition: transform 0.6s ease, height 0.9s ease, width 0.9s ease,
+    border-radius 0.3s ease;
+  transition-delay: 0.4s;
 }
 
 .sun.clicked ~ .infoBubble3 {
-  transform: translate(0px, 100px);
-  transition-delay: 0.3s;
+  height: 300px;
+  width: 240px;
+  border-radius: 12px;
+  transform: translate(240px, -170px);
+  transition: transform 0.6s ease, height 0.9s ease, width 0.9s ease,
+    border-radius 0.3s ease;
+  transition-delay: 0.4s;
 }
 
-/* arms */
 .sun.clicked ~ .infoBubble4 {
-  transform: translate(90px, -70px);
-  transition-delay: 0.6s;
+  height: 300px;
+  width: 240px;
+  border-radius: 12px;
+  transform: translate(240px, 170px);
+  transition: transform 0.6s ease, height 0.9s ease, width 0.9s ease,
+    border-radius 0.3s ease;
+  transition-delay: 0.8s;
 }
 
 .sun.clicked ~ .infoBubble5 {
-  transform: translate(-90px, -70px);
-  transition-delay: 0.6s;
+  height: 240px;
+  width: 200px;
+  border-radius: 12px;
+  transform: translate(0px, 200px);
+  transition: transform 0.6s ease, height 0.9s ease, width 0.9s ease,
+    border-radius 0.3s ease;
+  transition-delay: 1s;
 }
 
 .sun.clicked ~ .infoBubble6 {
-  transform: translate(150px, 10px);
-  transition-delay: 0.9s;
+  height: 140px;
+  width: 240px;
+  border-radius: 12px;
+  transform: translate(-240px, 90px);
+  transition: transform 0.6s ease, height 0.9s ease, width 0.9s ease,
+    border-radius 0.3s ease;
+  transition-delay: 0.8s;
 }
 
 .sun.clicked ~ .infoBubble7 {
-  transform: translate(-150px, 10px);
-  transition-delay: 0.9s;
-}
-
-/* legs */
-.sun.clicked ~ .infoBubble8 {
-  transform: translate(80px, 170px);
-  transition-delay: 0.6s;
-}
-
-.sun.clicked ~ .infoBubble9 {
-  transform: translate(-80px, 170px);
-  transition-delay: 0.6s;
-}
-
-.sun.clicked ~ .infoBubble10 {
-  transform: translate(80px, 270px);
-  transition-delay: 0.9s;
-}
-
-.sun.clicked ~ .infoBubble11 {
-  transform: translate(-80px, 270px);
-  transition-delay: 0.9s;
+  height: 140px;
+  width: 240px;
+  border-radius: 12px;
+  transform: translate(-240px, 250px);
+  transition: transform 0.6s ease, height 0.9s ease, width 0.9s ease,
+    border-radius 0.3s ease;
+  transition-delay: 0.8s;
 }
 
 /* ----------------------------------- */
@@ -338,39 +407,6 @@ main {
 /* ----------------------------------- */
 /************* Bubble Info *************/
 /* ----------------------------------- */
-
-.infoBubble1.clicked {
-}
-
-.infoBubble1.clicked ~ .infoBubble2 {
-}
-
-.infoBubble1.clicked ~ .infoBubble3 {
-}
-
-.infoBubble1.clicked ~ .infoBubble4 {
-}
-
-.infoBubble1.clicked ~ .infoBubble5 {
-}
-
-.infoBubble1.clicked ~ .infoBubble6 {
-}
-
-.infoBubble1.clicked ~ .infoBubble7 {
-}
-
-.infoBubble1.clicked ~ .infoBubble8 {
-}
-
-.infoBubble1.clicked ~ .infoBubble9 {
-}
-
-.infoBubble1.clicked ~ .infoBubble10 {
-}
-
-.infoBubble1.clicked ~ .infoBubbl11 {
-}
 
 /* ----------------------------------- */
 /* ----------------------------------- */
