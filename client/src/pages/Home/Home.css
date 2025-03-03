@@ -10,6 +10,17 @@ main {
   overflow: hidden;
 }
 
+h1,
+h2,
+h3,
+h4,
+h5,
+p,
+button {
+  background: none;
+  user-select: none;
+}
+
 /* ----------------------------------- */
 /************* Solar System ************/
 /* ----------------------------------- */
@@ -29,6 +40,7 @@ main {
   transition: width 0.5s ease, height 0.5s ease, border-radius 0.5s ease,
     box-shadow 0.5s ease, background-color 0.5s ease;
   cursor: pointer;
+  user-select: none;
 }
 
 .sun.clicked {
@@ -311,12 +323,6 @@ main {
   transition: opacity 0.3s ease;
 }
 
-.infoBubble:hover {
-  box-shadow: 0 0 10px rgba(255, 255, 255, 0.5),
-    0 0 15px rgba(255, 255, 255, 0.4), 0 0 10px rgba(255, 255, 255, 0.3),
-    0 0 25px rgba(255, 255, 255, 0.2) inset;
-}
-
 /* Ensure the base size before expansion */
 .sun ~ .infoBubble {
   height: 5px;
@@ -451,3 +457,151 @@ main {
 
 /* ----------------------------------- */
 /* ----------------------------------- */
+
+/* ----------------------------------- */
+/*********** Profile picture ************/
+/* ----------------------------------- */
+
+.profileContainer {
+  height: 220px;
+  width: 180px;
+  border-radius: 12px;
+  overflow: hidden;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: transform 0.3s ease-in-out;
+}
+
+.profileContainer img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.profileContainer:hover {
+  transform: scale(0.9);
+}
+
+/* ----------------------------------- */
+/* ----------------------------------- */
+
+/* ----------------------------------- */
+/********* infoBubble Content **********/
+/* ----------------------------------- */
+
+.infoBubble2 {
+  display: flex;
+  margin: 10px;
+  height: 300px;
+  width: 240px;
+  z-index: 1;
+  border-radius: 24px;
+  border: 2px solid rgba(56, 55, 55, 0.758);
+  background-color: rgba(56, 55, 55, 0.758);
+}
+
+.infoBubble2:hover {
+  animation: boxshadow1;
+  animation-duration: 0.6s;
+  animation-fill-mode: forwards;
+  animation-timing-function: ease-out;
+}
+
+@keyframes boxshadow1 {
+  from {
+    box-shadow: 0;
+    border: 2px solid rgba(0, 255, 0, 0);
+  }
+
+  to {
+    box-shadow: 0 0 15px rgba(76, 175, 80, 0.8), 0 0 20px rgba(76, 175, 80, 0.5),
+      0 0 20px rgba(76, 175, 80, 0.4), 0 0 25px rgba(76, 175, 80, 0.3) inset;
+    border: 2px solid rgba(76, 175, 80, 1);
+  }
+}
+
+.infoBubble3 {
+  display: flex;
+  margin: 10px;
+  height: 300px;
+  width: 240px;
+  z-index: 1;
+  border-radius: 24px;
+  border: 2px solid rgba(56, 55, 55, 0.758);
+  background-color: rgba(56, 55, 55, 0.758);
+}
+
+.infoBubble3:hover {
+  animation: boxshadow2;
+  animation-duration: 0.6s;
+  animation-fill-mode: forwards;
+  animation-timing-function: ease-out;
+}
+
+@keyframes boxshadow2 {
+  from {
+    box-shadow: 0;
+    border: 2px solid rgba(0, 255, 0, 0);
+  }
+
+  to {
+    box-shadow: 0 0 15px rgba(255, 215, 55, 0.8),
+      0 0 20px rgba(255, 215, 55, 0.5), 0 0 20px rgba(255, 215, 55, 0.4),
+      0 0 25px rgba(255, 215, 55, 0.3) inset;
+    border: 2px solid rgba(255, 215, 55, 1);
+  }
+}
+
+.infoBubbleContent {
+  background: none;
+  border-radius: 12px;
+  padding: 22px;
+}
+
+.title {
+  font-size: 28px;
+}
+
+.paragraph {
+  margin-top: 80px;
+  font-size: 18px;
+}
+
+.download1 {
+  margin-top: 15px;
+  height: 40px;
+  width: 100%;
+  border-radius: 6px 6px 12px 12px;
+  border: none;
+  background-color: white;
+  cursor: pointer;
+  font-size: 16px;
+  transition-duration: 0.3s;
+  font-weight: bold;
+}
+
+.download1:hover {
+  background-color: rgba(76, 175, 80, 1);
+  animation-timing-function: ease-in-out;
+  color: white;
+}
+
+.download2 {
+  margin-top: 15px;
+  height: 40px;
+  width: 100%;
+  border-radius: 6px 6px 12px 12px;
+  border: none;
+  background-color: white;
+  cursor: pointer;
+  font-size: 16px;
+  transition-duration: 0.3s;
+  font-weight: bold;
+}
+
+.download2:hover {
+  background-color: rgba(255, 215, 55, 0.8);
+  animation-timing-function: ease-in-out;
+  color: white;
+}

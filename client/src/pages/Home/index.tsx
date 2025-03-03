@@ -1,4 +1,7 @@
 import { useEffect, useState } from "react";
+import profile from "../../../public/img/IMG_3794 3.png";
+import bioengThesis from "../../../public/pdf/bioengThesisFinished.pdf";
+import econThesis from "../../../public/pdf/econThesisFinished.pdf";
 import "./Home.css";
 
 const Home = () => {
@@ -7,6 +10,20 @@ const Home = () => {
 
   const handleClick = () => {
     setClicked(!clicked);
+  };
+
+  const handleDownload1 = () => {
+    const link = document.createElement("a");
+    link.href = bioengThesis;
+    link.download = "Bioengineering_BSc_Thesis_HU.pdf";
+    link.click();
+  };
+
+  const handleDownload2 = () => {
+    const link = document.createElement("a");
+    link.href = econThesis;
+    link.download = "Economics_BSc_Thesis_EN.pdf";
+    link.click();
   };
 
   useEffect(() => {
@@ -57,15 +74,35 @@ const Home = () => {
       </div>
 
       <div className={`infoBubble infoBubble1`}>
-        <div className="infoBubbleContent infoBubbleContent1">CV</div>
+        <div className="infoBubbleContent infoBubbleContent1">
+          <div className="profileContainer">
+            <img src={profile} alt="Profile Image" className="profile" />
+          </div>
+        </div>
       </div>
       <div className={`infoBubble infoBubble2`}>
-        <div className="infoBubbleContent infoBubbleContent2">
-          Bioengineering
+        <div className="infoBubbleContent">
+          <h2 className="title">Bioengineering</h2>
+          <p className="paragraph">
+            The jurney had it's ups and downs, but in 2023 I became a Biomedical
+            Engineer.
+          </p>
+          <button className="download1" onClick={handleDownload1}>
+            Download BSc Thesis
+          </button>
         </div>
       </div>
       <div className={`infoBubble infoBubble3`}>
-        <div className="infoBubbleContent infoBubbleContent3">Economics</div>
+        <div className="infoBubbleContent">
+          <h2 className="title">Economics</h2>
+          <p className="paragraph">
+            Wanted to use my free time efficiently. Started studying economics
+            in 2021.
+          </p>
+          <button className="download2" onClick={handleDownload2}>
+            Download BSc Thesis
+          </button>
+        </div>
       </div>
       <div className={`infoBubble infoBubble4`}>
         <div className="infoBubbleContent infoBubbleContent4">Programming</div>
