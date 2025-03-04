@@ -24,6 +24,7 @@ button {
 /* ----------------------------------- */
 /************* Solar System ************/
 /* ----------------------------------- */
+
 .sun {
   position: absolute;
   z-index: 100;
@@ -325,9 +326,9 @@ button {
 
 /* Ensure the base size before expansion */
 .sun ~ .infoBubble {
-  height: 5px;
-  width: 5px;
-  border-radius: 50%;
+  height: 0px;
+  width: 0px;
+  border-radius: 12px;
   transform: translate(0px, 0px);
 }
 
@@ -412,6 +413,339 @@ button {
 /* ----------------------------------- */
 
 /* ----------------------------------- */
+/*********** Profile picture ************/
+/* ----------------------------------- */
+
+.profileContainer {
+  height: 220px;
+  width: 180px;
+  border-radius: 12px;
+  overflow: hidden;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: transform 0.3s ease-in-out;
+}
+
+.profileContainer img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.profileContainer:hover {
+  transform: scale(0.9);
+}
+
+/* ----------------------------------- */
+/* ----------------------------------- */
+
+/* ----------------------------------- */
+/********* infoBubble Content **********/
+/* ----------------------------------- */
+
+.infoBubble2 {
+  display: flex;
+  margin: 10px;
+  height: 300px;
+  width: 240px;
+  z-index: 1;
+  border-radius: 24px;
+  background-color: rgba(56, 55, 55, 0.758);
+  border: 2px solid rgba(76, 175, 80, 0.5);
+}
+
+.infoBubble2:hover {
+  animation: boxshadow1;
+  animation-duration: 0.6s;
+  animation-fill-mode: forwards;
+  animation-timing-function: ease-out;
+}
+
+@keyframes boxshadow1 {
+  from {
+    box-shadow: 0;
+  }
+
+  to {
+    box-shadow: 0 0 15px rgba(76, 175, 80, 0.8), 0 0 20px rgba(76, 175, 80, 0.5),
+      0 0 20px rgba(76, 175, 80, 0.4), 0 0 25px rgba(76, 175, 80, 0.3) inset;
+    border: 2px solid rgba(76, 175, 80, 1);
+  }
+}
+
+.infoBubble3 {
+  display: flex;
+  margin: 10px;
+  height: 300px;
+  width: 240px;
+  z-index: 1;
+  border-radius: 24px;
+  background-color: rgba(56, 55, 55, 0.758);
+  border: 2px solid rgba(255, 215, 55, 0.5);
+}
+
+.infoBubble3:hover {
+  animation: boxshadow2;
+  animation-duration: 0.6s;
+  animation-fill-mode: forwards;
+  animation-timing-function: ease-out;
+}
+
+@keyframes boxshadow2 {
+  from {
+    box-shadow: 0;
+  }
+
+  to {
+    box-shadow: 0 0 15px rgba(255, 215, 55, 0.8),
+      0 0 20px rgba(255, 215, 55, 0.5), 0 0 20px rgba(255, 215, 55, 0.4),
+      0 0 25px rgba(255, 215, 55, 0.3) inset;
+    border: 2px solid rgba(255, 215, 55, 1);
+  }
+}
+
+.infoBubble4 {
+  display: flex;
+  margin: 10px;
+  height: 300px;
+  width: 240px;
+  z-index: 1;
+  border-radius: 24px;
+  background-color: rgba(56, 55, 55, 0.758);
+  border: 2px solid rgba(255, 60, 60, 0.5);
+}
+
+.infoBubble4:hover {
+  animation: boxshadow3;
+  animation-duration: 0.6s;
+  animation-fill-mode: forwards;
+  animation-timing-function: ease-out;
+}
+
+@keyframes boxshadow3 {
+  from {
+    box-shadow: 0;
+  }
+
+  to {
+    box-shadow: 0 0 15px rgba(255, 60, 60, 0.8), 0 0 20px rgba(255, 60, 60, 0.5),
+      0 0 20px rgba(255, 60, 60, 0.4), 0 0 25px rgba(255, 60, 60, 0.3) inset;
+    border: 2px solid rgba(255, 60, 60, 1);
+  }
+}
+
+.infoBubble5 {
+  display: flex;
+  margin: 10px;
+  height: 140px;
+  width: 240px;
+  z-index: 1;
+  border-radius: 24px;
+  background-color: rgba(56, 55, 55, 0.758);
+  border: 2px solid rgba(240, 250, 250, 0.5);
+}
+
+.infoBubble5:hover {
+  animation: boxshadow6;
+  animation-duration: 0.6s;
+  animation-fill-mode: forwards;
+  animation-timing-function: ease-out;
+}
+
+@keyframes boxshadow6 {
+  from {
+    box-shadow: 0;
+  }
+
+  to {
+    box-shadow: 0 0 15px rgba(240, 250, 250, 0.8),
+      0 0 20px rgba(240, 250, 250, 0.5), 0 0 20px rgba(240, 250, 250, 0.4),
+      0 0 25px rgba(240, 250, 250, 0.3) inset;
+    border: 2px solid rgba(240, 250, 250, 1);
+  }
+}
+
+.infoBubble6 {
+  display: flex;
+  margin: 10px;
+  height: 140px;
+  width: 240px;
+  z-index: 1;
+  border-radius: 24px;
+  background-color: rgba(56, 55, 55, 0.758);
+  border: 2px solid rgba(15, 30, 240, 0.5);
+}
+
+.infoBubble6:hover {
+  animation: boxshadow4;
+  animation-duration: 0.6s;
+  animation-fill-mode: forwards;
+  animation-timing-function: ease-out;
+}
+
+@keyframes boxshadow4 {
+  from {
+    box-shadow: 0;
+  }
+
+  to {
+    box-shadow: 0 0 15px rgba(15, 30, 240, 0.8), 0 0 20px rgba(15, 30, 240, 0.5),
+      0 0 20px rgba(15, 30, 240, 0.4), 0 0 25px rgba(15, 30, 240, 0.3) inset;
+    border: 2px solid rgba(15, 30, 240, 1);
+  }
+}
+
+.infoBubble7 {
+  display: flex;
+  margin: 10px;
+  height: 140px;
+  width: 240px;
+  z-index: 1;
+  border-radius: 24px;
+  background-color: rgba(56, 55, 55, 0.758);
+  border: 2px solid rgba(125, 240, 255, 0.5);
+}
+
+.infoBubble7:hover {
+  animation: boxshadow5;
+  animation-duration: 0.6s;
+  animation-fill-mode: forwards;
+  animation-timing-function: ease-out;
+}
+
+@keyframes boxshadow5 {
+  from {
+    box-shadow: 0;
+  }
+
+  to {
+    box-shadow: 0 0 15px rgba(125, 240, 255, 0.8),
+      0 0 20px rgba(125, 240, 255, 0.5), 0 0 20px rgba(125, 240, 255, 0.4),
+      0 0 25px rgba(125, 240, 255, 0.3) inset;
+    border: 2px solid rgba(125, 240, 255, 1);
+  }
+}
+
+.infoBubbleContent {
+  background: none;
+  border-radius: 12px;
+  padding: 20px;
+}
+
+.title {
+  font-size: 24px;
+}
+
+.paragraph {
+  margin-top: 80px;
+  font-size: 16px;
+}
+
+.paragraph4 {
+  margin-top: 35px;
+}
+
+.paragraph6,
+.paragraph7 {
+  margin-top: 5px;
+}
+
+.download1 {
+  margin-top: 15px;
+  height: 40px;
+  width: 100%;
+  border-radius: 6px 6px 12px 12px;
+  border: none;
+  background-color: white;
+  cursor: pointer;
+  font-size: 16px;
+  transition-duration: 0.3s;
+  font-weight: bold;
+}
+
+.download1:hover {
+  background-color: rgba(76, 175, 80, 1);
+  animation-timing-function: ease-in-out;
+  color: white;
+}
+
+.download2 {
+  margin-top: 15px;
+  height: 40px;
+  width: 100%;
+  border-radius: 6px 6px 12px 12px;
+  border: none;
+  background-color: white;
+  cursor: pointer;
+  font-size: 16px;
+  transition-duration: 0.3s;
+  font-weight: bold;
+}
+
+.download2:hover {
+  background-color: rgba(255, 215, 55, 0.8);
+  animation-timing-function: ease-in-out;
+  color: white;
+}
+
+.download3 {
+  margin-top: 15px;
+  height: 40px;
+  width: 100%;
+  border-radius: 6px 6px 12px 12px;
+  border: none;
+  background-color: white;
+  cursor: pointer;
+  font-size: 16px;
+  transition-duration: 0.3s;
+  font-weight: bold;
+}
+
+.download3:hover {
+  background-color: rgba(255, 60, 60, 0.8);
+  animation-timing-function: ease-in-out;
+  color: white;
+}
+
+.linkButton {
+  position: relative;
+  margin: 5px;
+  height: 45px;
+  width: 90%;
+  background-color: white;
+  border: none;
+  border-radius: 6px;
+  transition-duration: 0.3s;
+}
+
+.linkButton1:hover {
+  background-color: #0c65c2;
+  animation-timing-function: ease-in-out;
+  color: white;
+}
+
+.linkButton2:hover {
+  background-color: #76a8fb;
+  animation-timing-function: ease-in-out;
+  color: white;
+}
+
+.linkButton3:hover {
+  background-color: #202228;
+  animation-timing-function: ease-in-out;
+  color: white;
+}
+
+.linkButton4:hover {
+  background-color: #0666fc;
+  animation-timing-function: ease-in-out;
+  color: white;
+}
+/* ----------------------------------- */
+/* ----------------------------------- */
+
+/* ----------------------------------- */
 /************ Toast Notification *******/
 /* ----------------------------------- */
 .toast {
@@ -457,151 +791,3 @@ button {
 
 /* ----------------------------------- */
 /* ----------------------------------- */
-
-/* ----------------------------------- */
-/*********** Profile picture ************/
-/* ----------------------------------- */
-
-.profileContainer {
-  height: 220px;
-  width: 180px;
-  border-radius: 12px;
-  overflow: hidden;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  transition: transform 0.3s ease-in-out;
-}
-
-.profileContainer img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-}
-
-.profileContainer:hover {
-  transform: scale(0.9);
-}
-
-/* ----------------------------------- */
-/* ----------------------------------- */
-
-/* ----------------------------------- */
-/********* infoBubble Content **********/
-/* ----------------------------------- */
-
-.infoBubble2 {
-  display: flex;
-  margin: 10px;
-  height: 300px;
-  width: 240px;
-  z-index: 1;
-  border-radius: 24px;
-  border: 2px solid rgba(56, 55, 55, 0.758);
-  background-color: rgba(56, 55, 55, 0.758);
-}
-
-.infoBubble2:hover {
-  animation: boxshadow1;
-  animation-duration: 0.6s;
-  animation-fill-mode: forwards;
-  animation-timing-function: ease-out;
-}
-
-@keyframes boxshadow1 {
-  from {
-    box-shadow: 0;
-    border: 2px solid rgba(0, 255, 0, 0);
-  }
-
-  to {
-    box-shadow: 0 0 15px rgba(76, 175, 80, 0.8), 0 0 20px rgba(76, 175, 80, 0.5),
-      0 0 20px rgba(76, 175, 80, 0.4), 0 0 25px rgba(76, 175, 80, 0.3) inset;
-    border: 2px solid rgba(76, 175, 80, 1);
-  }
-}
-
-.infoBubble3 {
-  display: flex;
-  margin: 10px;
-  height: 300px;
-  width: 240px;
-  z-index: 1;
-  border-radius: 24px;
-  border: 2px solid rgba(56, 55, 55, 0.758);
-  background-color: rgba(56, 55, 55, 0.758);
-}
-
-.infoBubble3:hover {
-  animation: boxshadow2;
-  animation-duration: 0.6s;
-  animation-fill-mode: forwards;
-  animation-timing-function: ease-out;
-}
-
-@keyframes boxshadow2 {
-  from {
-    box-shadow: 0;
-    border: 2px solid rgba(0, 255, 0, 0);
-  }
-
-  to {
-    box-shadow: 0 0 15px rgba(255, 215, 55, 0.8),
-      0 0 20px rgba(255, 215, 55, 0.5), 0 0 20px rgba(255, 215, 55, 0.4),
-      0 0 25px rgba(255, 215, 55, 0.3) inset;
-    border: 2px solid rgba(255, 215, 55, 1);
-  }
-}
-
-.infoBubbleContent {
-  background: none;
-  border-radius: 12px;
-  padding: 22px;
-}
-
-.title {
-  font-size: 28px;
-}
-
-.paragraph {
-  margin-top: 80px;
-  font-size: 18px;
-}
-
-.download1 {
-  margin-top: 15px;
-  height: 40px;
-  width: 100%;
-  border-radius: 6px 6px 12px 12px;
-  border: none;
-  background-color: white;
-  cursor: pointer;
-  font-size: 16px;
-  transition-duration: 0.3s;
-  font-weight: bold;
-}
-
-.download1:hover {
-  background-color: rgba(76, 175, 80, 1);
-  animation-timing-function: ease-in-out;
-  color: white;
-}
-
-.download2 {
-  margin-top: 15px;
-  height: 40px;
-  width: 100%;
-  border-radius: 6px 6px 12px 12px;
-  border: none;
-  background-color: white;
-  cursor: pointer;
-  font-size: 16px;
-  transition-duration: 0.3s;
-  font-weight: bold;
-}
-
-.download2:hover {
-  background-color: rgba(255, 215, 55, 0.8);
-  animation-timing-function: ease-in-out;
-  color: white;
-}

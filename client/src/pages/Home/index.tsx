@@ -26,6 +26,28 @@ const Home = () => {
     link.click();
   };
 
+  const handleDownload3 = () => {
+    window.open("https://www.bioversee.com/");
+  };
+
+  const handleLink1 = () => {
+    window.open("https://www.linkedin.com/in/matemelcher/");
+  };
+
+  const handleLink2 = () => {
+    window.open(
+      "https://scholar.google.com/citations?user=udUgb-IAAAAJ&hl=hu&authuser=1"
+    );
+  };
+
+  const handleLink3 = () => {
+    window.open("https://github.com/MelcherMate");
+  };
+
+  const handleLink4 = () => {
+    window.open("https://www.facebook.com/profile.php?id=100080118015753");
+  };
+
   useEffect(() => {
     if (showToast) {
       const timer = setTimeout(() => {
@@ -83,7 +105,7 @@ const Home = () => {
       <div className={`infoBubble infoBubble2`}>
         <div className="infoBubbleContent">
           <h2 className="title">Bioengineering</h2>
-          <p className="paragraph">
+          <p className="paragraph paragraph2">
             The jurney had it's ups and downs, but in 2023 I became a Biomedical
             Engineer.
           </p>
@@ -95,7 +117,7 @@ const Home = () => {
       <div className={`infoBubble infoBubble3`}>
         <div className="infoBubbleContent">
           <h2 className="title">Economics</h2>
-          <p className="paragraph">
+          <p className="paragraph paragraph3">
             Wanted to use my free time efficiently. Started studying economics
             in 2021.
           </p>
@@ -105,18 +127,50 @@ const Home = () => {
         </div>
       </div>
       <div className={`infoBubble infoBubble4`}>
-        <div className="infoBubbleContent infoBubbleContent4">Programming</div>
+        <div className="infoBubbleContent">
+          <h2 className="title">Software Development</h2>
+          <p className="paragraph paragraph4">
+            When I was a child I was a huge fan of LEGO. For me, softwares are
+            like LEGO toys, except they don't lay all around in my room.
+          </p>{" "}
+          <button className="download3" onClick={handleDownload3}>
+            Project Bioversee
+          </button>
+        </div>{" "}
       </div>
       <div className={`infoBubble infoBubble5`}>
         <div className="infoBubbleContent infoBubbleContent5">
-          Links to my profiles
+          <button className="linkButton linkButton1" onClick={handleLink1}>
+            Linkedin
+          </button>
+          <button className="linkButton linkButton2" onClick={handleLink2}>
+            Google Scholar
+          </button>
+          <button className="linkButton linkButton3" onClick={handleLink3}>
+            GitHub
+          </button>
+          <button className="linkButton linkButton4" onClick={handleLink4}>
+            Facebook
+          </button>
         </div>
       </div>
       <div className={`infoBubble infoBubble6`}>
-        <div className="infoBubbleContent infoBubbleContent6">Windsurfing</div>
+        <div className="infoBubbleContent infoBubbleContent6">
+          <h2 className="title">Windsurf</h2>
+          <p className="paragraph paragraph6">
+            Following in my father's footsteps, I love spending time on the
+            water when the weather is rugged.
+          </p>
+        </div>
       </div>
       <div className={`infoBubble infoBubble7`}>
-        <div className="infoBubbleContent infoBubbleContent7">Skiing</div>
+        <div className="infoBubbleContent">
+          <h2 className="title">Ski</h2>
+          <p className="paragraph paragraph7">
+            I was only 3 when I started. Scince there is almost no place in the
+            Alpes I didn't tried.
+          </p>
+        </div>{" "}
       </div>
 
       <div className={`toast ${showToast ? "show" : "hide"}`}>
