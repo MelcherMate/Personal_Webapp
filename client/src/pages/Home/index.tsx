@@ -1,4 +1,5 @@
 import { useEffect, useState } from "react";
+import { FaFacebook, FaFlask, FaGithub, FaLinkedin } from "react-icons/fa";
 import profile from "../../../public/img/IMG_3794 3.png";
 import bioengThesis from "../../../public/pdf/bioengThesisFinished.pdf";
 import econThesis from "../../../public/pdf/econThesisFinished.pdf";
@@ -141,15 +142,19 @@ const Home = () => {
       <div className={`infoBubble infoBubble5`}>
         <div className="infoBubbleContent infoBubbleContent5">
           <button className="linkButton linkButton1" onClick={handleLink1}>
+            <FaLinkedin className="socialIcon" />
             Linkedin
           </button>
           <button className="linkButton linkButton2" onClick={handleLink2}>
+            <FaFlask className="socialIcon" />
             Google Scholar
           </button>
           <button className="linkButton linkButton3" onClick={handleLink3}>
+            <FaGithub className="socialIcon" />
             GitHub
           </button>
           <button className="linkButton linkButton4" onClick={handleLink4}>
+            <FaFacebook className="socialIcon" />
             Facebook
           </button>
         </div>

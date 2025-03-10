@@ -657,7 +657,7 @@ button {
   width: 100%;
   border-radius: 6px 6px 12px 12px;
   border: none;
-  background-color: white;
+  background-color: whitesmoke;
   cursor: pointer;
   font-size: 16px;
   transition-duration: 0.3s;
@@ -676,7 +676,7 @@ button {
   width: 100%;
   border-radius: 6px 6px 12px 12px;
   border: none;
-  background-color: white;
+  background-color: whitesmoke;
   cursor: pointer;
   font-size: 16px;
   transition-duration: 0.3s;
@@ -695,7 +695,7 @@ button {
   width: 100%;
   border-radius: 6px 6px 12px 12px;
   border: none;
-  background-color: white;
+  background-color: whitesmoke;
   cursor: pointer;
   font-size: 16px;
   transition-duration: 0.3s;
@@ -712,11 +712,24 @@ button {
   position: relative;
   margin: 5px;
   height: 45px;
-  width: 90%;
-  background-color: white;
+  width: 95%;
+  text-align: end;
+  padding-right: 15px;
   border: none;
   border-radius: 6px;
   transition-duration: 0.3s;
+  font-size: 15px;
+  background-color: whitesmoke;
+}
+
+.socialIcon {
+  position: absolute;
+  top: 50%;
+  left: 10px;
+  transform: translateY(-50%);
+  height: 20px;
+  width: 20px;
+  background: none;
 }
 
 .linkButton1:hover {
