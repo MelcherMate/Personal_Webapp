@@ -53,7 +53,7 @@ const Home = () => {
     if (showToast) {
       const timer = setTimeout(() => {
         setShowToast(false);
-      }, 5000);
+      }, 6000);
       return () => clearTimeout(timer);
     }
   }, [showToast]);

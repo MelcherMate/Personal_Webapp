@@ -731,12 +731,13 @@ button {
   height: 45px;
   width: 95%;
   text-align: end;
-  padding-right: 15px;
+  padding-right: 12px;
   border: none;
   border-radius: 6px;
   transition-duration: 0.3s;
   font-size: 15px;
   background-color: whitesmoke;
+  font-weight: bold;
 }
 
 .socialIcon {
@@ -807,7 +808,7 @@ button {
   left: 0;
   height: 4px;
   background-color: #ffd700;
-  animation: progress 5s linear forwards;
+  animation: progress 6s linear forwards;
 }
 
 @keyframes progress {
