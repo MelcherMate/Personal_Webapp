@@ -59,7 +59,7 @@ const Home = () => {
   }, [showToast]);
 
   return (
-    <main>
+    <main className="home">
       <div className={`sun ${clicked ? "clicked" : ""}`} onClick={handleClick}>
         <div className="sunContent">Welcome</div>
       </div>
