@@ -1,4 +1,3 @@
-import { useState } from "react";
 import {
   FaAddressCard,
   FaComment,
@@ -8,9 +7,7 @@ import {
 } from "react-icons/fa";
 import "./Menu.css";
 
-const Menu = () => {
-  const [activeIndex, setActiveIndex] = useState(2); // default active is "Home"
-
+const Menu = ({ activeIndex, setActiveIndex }) => {
   const menuItems = [
     { icon: <FaComment />, text: "Message" },
     { icon: <FaAddressCard />, text: "Profile" },
