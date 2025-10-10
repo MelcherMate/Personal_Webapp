@@ -28,262 +28,252 @@
   margin-top: 40px;
 }
 
-/* =================== Metro Cards Container =================== */
-.metroCards {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  gap: 20px;
-  margin-top: 40px;
+/* =================== Shared Grid Container =================== */
+.parent {
+  display: grid;
+  grid-template-columns: repeat(6, 1fr);
+  grid-template-rows: repeat(6, 1fr);
+  gap: 12px;
   width: 100%;
-  transform-origin: left center;
-  transition: transform 0.8s ease;
+  height: 75vh;
+  margin-top: 40px;
 }
 
-/* =================== Individual Cards =================== */
-.metroCard {
-  background-color: white;
-  border-radius: 14px;
-  box-shadow: 0 6px 14px rgba(0, 0, 0, 0.08);
+.parent > div {
   display: flex;
   align-items: center;
   justify-content: center;
   font-weight: bold;
-  font-size: 18px;
-  transition: transform 0.8s ease, box-shadow 0.3s ease, opacity 0.5s ease;
-  cursor: pointer;
-  flex: 1 1 250px;
-  max-width: 340px;
-  height: 270px;
-  opacity: 1;
-  position: relative;
-}
-.metroCard:hover {
-  box-shadow: 0 10px 22px rgba(0, 0, 0, 0.15);
+  font-size: 24px;
+  color: white;
+  border-radius: 16px;
+  background-color: gray;
 }
 
-/* =================== Card Content =================== */
-.cardContent {
-  transition: opacity 0.5s ease, transform 0.5s ease;
-  opacity: 0;
-  transform: translateY(10px);
-  padding: 16px;
-  position: absolute;
-  width: 100%;
-  height: 100%;
+/* =================== Layout 0 =================== */
+.layout-0 .div1 {
+  grid-column: span 2 / span 2;
+  grid-row: span 3 / span 3;
+}
+.layout-0 .div2 {
+  grid-column: span 2 / span 2;
+  grid-row: span 3 / span 3;
+  grid-column-start: 3;
+}
+.layout-0 .div3 {
+  grid-column: span 2 / span 2;
+  grid-row: span 3 / span 3;
+  grid-column-start: 5;
+}
+
+/* =================== Layout 1 =================== */
+.layout-1 .div1 {
+  grid-column: span 2 / span 2;
+  grid-row: span 2 / span 2;
+}
+.layout-1 .div2 {
+  grid-column: span 4 / span 4;
+  grid-row: span 3 / span 3;
+  grid-column-start: 1;
+  grid-row-start: 3;
+}
+.layout-1 .div3 {
+  grid-column: span 2 / span 2;
+  grid-row: span 2 / span 2;
+  grid-column-start: 3;
+  grid-row-start: 1;
+}
+.layout-1 .div4 {
+  grid-column: span 2 / span 2;
+  grid-row: span 5 / span 5;
+  grid-column-start: 5;
+  grid-row-start: 1;
+}
+
+/* =================== Layout 2 =================== */
+.layout-2 .div1 {
+  grid-column: span 2 / span 2;
+  grid-row: span 2 / span 2;
+  grid-column-start: 3;
+  grid-row-start: 2;
+}
+.layout-2 .div2 {
+  grid-column: span 2 / span 2;
+  grid-row: span 3 / span 3;
+  grid-column-start: 1;
+  grid-row-start: 1;
+}
+.layout-2 .div3 {
+  grid-column: span 2 / span 2;
+  grid-row: span 3 / span 3;
+  grid-column-start: 5;
+  grid-row-start: 1;
+}
+.layout-2 .div4 {
+  grid-column: span 2 / span 2;
+  grid-column-start: 3;
+  grid-row-start: 1;
+}
+.layout-2 .div5 {
+  grid-row: span 3 / span 3;
+  grid-row-start: 4;
+}
+.layout-2 .div6 {
+  grid-column: span 4 / span 4;
+  grid-row: span 3 / span 3;
+  grid-row-start: 4;
   display: flex;
   flex-direction: column;
-  justify-content: center;
+  gap: 16px;
   align-items: center;
+  justify-content: center;
+}
+.layout-2 .div7 {
+  grid-row: span 3 / span 3;
+  grid-column-start: 6;
+  grid-row-start: 4;
 }
 
-.cardContent.visible {
+/* =================== Layout 3 =================== */
+.layout-3 {
+  grid-template-columns: repeat(5, 1fr);
+  grid-template-rows: repeat(5, 1fr);
+}
+.layout-3 .div1 {
+  grid-column: span 3 / span 3;
+  grid-row: span 3 / span 3;
+  grid-column-start: 2;
+  grid-row-start: 2;
+}
+
+/* =================== Layout 4 =================== */
+.layout-4 {
+  grid-template-columns: repeat(5, 1fr);
+  grid-template-rows: repeat(5, 1fr);
+}
+.layout-4 .div1 {
+  grid-column-start: 1;
+  grid-row-start: 1;
+}
+.layout-4 .div2 {
+  grid-column-start: 2;
+  grid-row-start: 2;
+}
+.layout-4 .div3 {
+  grid-column-start: 3;
+  grid-row-start: 1;
+}
+.layout-4 .div4 {
+  grid-column-start: 4;
+  grid-row-start: 2;
+}
+.layout-4 .div5 {
+  grid-column-start: 3;
+  grid-row-start: 3;
+}
+.layout-4 .div6 {
+  grid-column-start: 4;
+  grid-row-start: 4;
+}
+.layout-4 .div7 {
+  grid-column-start: 5;
+  grid-row-start: 5;
+}
+.layout-4 .div8 {
+  grid-column-start: 3;
+  grid-row-start: 5;
+}
+.layout-4 .div9 {
+  grid-column-start: 1;
+  grid-row-start: 5;
+}
+
+/* =================== Layout Transition Wrapper =================== */
+.layoutContainer {
+  position: relative;
+  width: 100%;
+  height: 80vh;
+  margin-top: 40px;
+}
+.layoutWrapper {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  opacity: 0;
+  transform: translateY(20px);
+  transition: opacity 0.7s ease, transform 0.7s ease;
+  pointer-events: none;
+}
+.layoutWrapper.visible {
   opacity: 1;
   transform: translateY(0);
-  position: relative;
+  pointer-events: all;
+  z-index: 2;
 }
-
-.cardContent.hidden {
+.layoutWrapper.hidden {
   opacity: 0;
-  transform: translateY(10px);
+  transform: translateY(20px);
+  z-index: 1;
 }
 
-/* =================== Text =================== */
-.cardTitle {
-  font-size: 1.5rem;
-  font-weight: 700;
-  line-height: 1.4;
-  margin-bottom: 14px;
-  text-align: center;
-  word-wrap: break-word;
-  max-width: 90%;
-  color: #222;
-}
-
-.cardText {
-  font-size: 15px;
-  color: #444;
-  line-height: 1.6;
-  text-align: center;
-  max-width: 90%;
-}
-
-/* =================== Layout Animations (PC only) =================== */
-@media (min-width: 901px) {
-  /* =================== Layout 0 — Contact Page =================== */
-  .layout-0 .card1 {
-    transform: translateX(360px);
-    opacity: 1;
-  }
-
-  .layout-0 .card2 {
-    transform: translateY(290px);
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    transition: transform 0.8s ease, opacity 0.8s ease;
-  }
-
-  .layout-0 .social-buttons {
-    display: flex;
-    flex-direction: column;
-    gap: 1.2rem;
-  }
-
-  .layout-0 .social-btn {
-    display: flex;
-    align-items: center;
-    justify-content: flex-start;
-    gap: 0.75rem;
-    font-size: 1.2rem;
-    text-decoration: none;
-    padding: 0.75rem 1.5rem;
-    border-radius: 12px;
-    color: #fff;
-    font-weight: 600;
-    transition: all 0.3s ease;
-    min-width: 270px;
-    line-height: 1;
-  }
-
-  .layout-0 .social-btn svg {
-    position: relative;
-    scale: 1.3;
-    top: 5px;
-    flex-shrink: 0;
-  }
-
-  /* Facebook authentic look */
-  .layout-0 .social-btn.facebook {
-    background-color: #1877f2;
-    font-family: "Facebook Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
-  }
-
-  /* GitHub authentic look */
-  .layout-0 .social-btn.github {
-    background-color: #24292e;
-    font-family: "SF Pro Text", "Segoe UI", Roboto, "Helvetica Neue", Arial,
-      sans-serif;
-  }
-
-  /* LinkedIn authentic look */
-  .layout-0 .social-btn.linkedin {
-    background-color: #0a66c2;
-    font-family: "LinkedIn Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
-  }
-
-  .layout-0 .social-btn:hover {
-    transform: translateY(-4px);
-    opacity: 0.9;
-  }
-
-  .layout-0 .social-text {
-    letter-spacing: 0.5px;
-  }
-
-  .layout-0 .card3 {
-    transform: translateX(-360px) translateY(580px);
-    opacity: 1;
-  }
-
-  /* =================== Layout 1 — Profile Page =================== */
-  .layout-1 .card1 {
-    transform: translate(0, 0);
-    opacity: 1;
-  }
-
-  .layout-1 .card2,
-  .layout-1 .card3 {
-    opacity: 0;
-    transform: scale(0.8) translateY(40px);
-    pointer-events: none;
-  }
-
-  /* =================== Layout 2 — Home Page =================== */
-  .layout-2 .card1,
-  .layout-2 .card2,
-  .layout-2 .card3 {
-    transform: translate(0, 0);
-    opacity: 1;
-  }
-
-  /* =================== Layout 3 — Files Page =================== */
-  .layout-3 .card1 {
-    transform: translate(0, 0);
-    opacity: 1;
-  }
-
-  .layout-3 .card2 {
-    transform: translate(-360px, 280px);
-    opacity: 1;
-  }
-
-  .layout-3 .card3 {
-    transform: translate(-720px, 560px);
-    opacity: 1;
-  }
-
-  /* =================== Layout 4 — Journey Page =================== */
-  .layout-4 .card1 {
-    transform: translateX(100px) rotate(-3deg);
-    opacity: 1;
-  }
-
-  .layout-4 .card2 {
-    transform: translateX(200px) translateY(50px) rotate(10deg);
-    opacity: 1;
-  }
-
-  .layout-4 .card3 {
-    transform: translateX(-600px) translateY(350px) rotate(-6deg);
-    opacity: 1;
-  }
-}
-
-/* =================== Responsive (Mobile) =================== */
+/* =================== Responsive =================== */
 @media (max-width: 900px) {
-  .metroCard {
-    flex: 1 1 100%;
-    max-width: none;
-    transform: none !important;
-    opacity: 1 !important;
+  .parent {
+    grid-template-columns: 1fr;
+    grid-template-rows: auto;
+    height: auto;
   }
-
-  .cardContent {
-    opacity: 1 !important;
-    transform: translateY(0) !important;
-  }
-} /* =================== PDF Card Download Button =================== */
-.downloadBtn {
-  display: inline-block;
-  margin-top: 12px;
-  padding: 8px 16px;
-  background-color: rgb(27, 100, 120);
-  color: #fff;
-  border-radius: 6px;
-  text-decoration: none;
-  font-weight: 500;
-  transition: transform 0.3s ease, background-color 0.3s ease;
-}
-
-.downloadBtn:hover {
-  transform: translateY(-3px);
-  background-color: #155763;
-}
-
-/* Align PDF icon and title */
-.cardContent svg {
-  margin-bottom: 12px;
-}
-
-/* =================== Animations =================== */
-@keyframes fadeIn {
-  from {
-    opacity: 0;
-    transform: translateY(20px);
-  }
-  to {
-    opacity: 1;
-    transform: translateY(0);
+  .parent > div {
+    grid-column: auto !important;
+    grid-row: auto !important;
   }
 }
+
+/* =================== Custom Div Styling =================== */
+
+/* =================== Layout 0 custon styles================ */
+
+/* =================== Layout 1 custon styles================ */
+
+/* =================== Layout 2 custon styles================ */
+
+/* Custom style for div 4 (the name block) */
+
+/* Custom styling for div 1 (the quote block) */
+.buzzQuote {
+  padding: 20px;
+  font-style: italic;
+  font-size: 18px;
+  line-height: 1.5;
+  border-radius: 10px;
+  color: white;
+  max-width: 90%;
+  text-align: left;
+}
+
+.buzzQuote footer {
+  font-style: normal;
+  font-weight: bold;
+  font-size: 16px;
+  display: block;
+  text-align: right;
+  opacity: 0.8;
+}
+
+/* Custom style for div 4 (the name block) */
+
+.mateMelcher {
+  padding: 20px;
+  font-family: "Montserrat", sans-serif;
+  font-size: 2.3rem;
+  line-height: 1.5;
+  border-radius: 10px;
+  color: white;
+  max-width: 90%;
+  text-align: center;
+}
+
+/* =================== Layout 3 custon styles================ */
+
+/* =================== Layout 4 custon styles================ */

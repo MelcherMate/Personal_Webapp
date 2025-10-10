@@ -1,19 +1,70 @@
+import { AnimatePresence, motion } from "framer-motion";
 import { useState } from "react";
-import { FaFacebookF, FaFilePdf, FaGithub, FaLinkedin } from "react-icons/fa";
 import Menu from "../../components/Menu";
 import "./Test.css";
 
-function Testsite() {
-  const [activeIndex, setActiveIndex] = useState(2); // Default "Home"
+const layouts = {
+  0: ["div1", "div2", "div3"],
+  1: ["div1", "div2", "div3", "div4"],
+  2: ["div1", "div2", "div3", "div4", "div5", "div6", "div7"],
+  3: ["div1"],
+  4: ["div1", "div2", "div3", "div4", "div5", "div6", "div7", "div8", "div9"],
+};
 
-  const pdfFiles = [
-    {
-      title: "Bioengineering Thesis (HU)",
-      path: "/pdf/bioengThesisFinished.pdf",
-    },
-    { title: "Economics Thesis (ENG)", path: "/pdf/econThesisFinished.pdf" },
-    { title: "Resume (ENG)", path: "/pdf/ResumeENG.pdf" },
-  ];
+const layoutsContent: Record<number, Record<string, JSX.Element | string>> = {
+  0: {
+    div1: <span>Content for div1 in layout 0</span>,
+    div2: <span>Content for div2 in layout 0</span>,
+    div3: <span>Content for div3 in layout 0</span>,
+  },
+  1: {
+    div1: <span>Content for div1 in layout 1</span>,
+    div2: <span>Content for div2 in layout 1</span>,
+    div3: <span>Content for div3 in layout 1</span>,
+    div4: <span>Content for div4 in layout 1</span>,
+  },
+  2: {
+    div1: (
+      <blockquote className="buzzQuote">
+        "Neil Armstrong was the first man to walk on the moon. I am the first
+        man to piss his pants on the moon."
+        <footer>― Buzz Aldrin</footer>
+      </blockquote>
+    ),
+    div2: <span>Some other content for div2</span>,
+    div3: <span>Another content for div3</span>,
+    div4: <span className="mateMelcher">Mate Melcher</span>,
+    div5: <span>Content 5</span>,
+    div6: (
+      <div className="pdfButtons">
+        <a href="/pdf/ResumeENG.pdf" download>
+          <button>Download Resume</button>
+        </a>
+        <a href="/pdf/econThesisFinished.pdf" download>
+          <button>Download Econ Thesis</button>
+        </a>
+      </div>
+    ),
+    div7: <span>Content 7</span>,
+  },
+  3: {
+    div1: <span>Only one div in layout 3</span>,
+  },
+  4: {
+    div1: <span>Layout 4 div1 content</span>,
+    div2: <span>Layout 4 div2 content</span>,
+    div3: <span>Layout 4 div3 content</span>,
+    div4: <span>Layout 4 div4 content</span>,
+    div5: <span>Layout 4 div5 content</span>,
+    div6: <span>Layout 4 div6 content</span>,
+    div7: <span>Layout 4 div7 content</span>,
+    div8: <span>Layout 4 div8 content</span>,
+    div9: <span>Layout 4 div9 content</span>,
+  },
+};
+
+function Testsite() {
+  const [activeIndex, setActiveIndex] = useState(0);
 
   return (
     <div className="pageLayout">
@@ -22,121 +73,22 @@ function Testsite() {
       <main className="mainContent">
         <Menu activeIndex={activeIndex} setActiveIndex={setActiveIndex} />
 
-        <div className={`metroCards layout-${activeIndex}`}>
-          {/* =================== CARD 1 =================== */}
-          <div className="metroCard card1">
-            <div className="cardContent visible">
-              {activeIndex === 0 ? (
-                <>
-                  <h3 className="cardTitle">Máté Melcher</h3>
-                  <p className="cardText">
-                    melchermate28@gmail.com <br />
-                    +36 20 283 7172 <br />
-                    Hungary, 3529 Miskolc – 16/a Aulich Lajos Street <br />
-                    Austria, 6020 Innsbruck – 3 Richard-Wagner Street
-                  </p>
-                </>
-              ) : activeIndex === 2 ? (
-                <>
-                  <h3 className="cardTitle">Mate Melcher</h3>
-                  <p className="cardText">
-                    Welcome to my portfolio. Here you can explore my projects
-                    and work.
-                  </p>
-                </>
-              ) : activeIndex === 3 ? (
-                <>
-                  <FaFilePdf size={48} color="#E74C3C" />
-                  <h3 className="cardTitle">{pdfFiles[0].title}</h3>
-                  <a className="downloadBtn" href={pdfFiles[0].path} download>
-                    Download
-                  </a>
-                </>
-              ) : activeIndex === 4 ? (
-                <>
-                  <h3 className="cardTitle">First Chapter</h3>
-                  <p className="cardText">
-                    This section contains the first chapter of my latest work.
-                  </p>
-                </>
-              ) : (
-                <>
-                  <h3 className="cardTitle">Card 1</h3>
-                  <p className="cardText">Default content</p>
-                </>
-              )}
-            </div>
-          </div>
-
-          {/* =================== CARD 2 (Layout 0 → Social Buttons) =================== */}
-          <div className="metroCard card2">
-            <div className="cardContent visible">
-              {activeIndex === 0 ? (
-                <div className="social-buttons">
-                  <a
-                    href="https://facebook.com"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="social-btn facebook"
-                  >
-                    <FaFacebookF className="social-icon" />
-                    <span className="social-text fb-font">facebook</span>
-                  </a>
-                  <a
-                    href="https://github.com/MelcherMate"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="social-btn github"
-                  >
-                    <FaGithub className="social-icon" />
-                    <span className="social-text gh-font">GitHub</span>
-                  </a>
-                  <a
-                    href="https://linkedin.com/in/matemelcher/"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="social-btn linkedin"
-                  >
-                    <FaLinkedin className="social-icon" />
-                    <span className="social-text li-font">LinkedIn</span>
-                  </a>
-                </div>
-              ) : activeIndex === 3 ? (
-                <>
-                  <FaFilePdf size={48} color="#E74C3C" />
-                  <h3 className="cardTitle">{pdfFiles[1].title}</h3>
-                  <a className="downloadBtn" href={pdfFiles[1].path} download>
-                    Download
-                  </a>
-                </>
-              ) : (
-                <>
-                  <h3 className="cardTitle">Card 2</h3>
-                  <p className="cardText">Default content</p>
-                </>
-              )}
-            </div>
-          </div>
-
-          {/* =================== CARD 3 =================== */}
-          <div className="metroCard card3">
-            <div className="cardContent visible">
-              {activeIndex === 3 ? (
-                <>
-                  <FaFilePdf size={48} color="#E74C3C" />
-                  <h3 className="cardTitle">{pdfFiles[2].title}</h3>
-                  <a className="downloadBtn" href={pdfFiles[2].path} download>
-                    Download
-                  </a>
-                </>
-              ) : (
-                <>
-                  <h3 className="cardTitle">Card 3</h3>
-                  <p className="cardText">Default content</p>
-                </>
-              )}
-            </div>
-          </div>
+        <div className={`parent layout-${activeIndex}`}>
+          <AnimatePresence>
+            {layouts[activeIndex].map((id) => (
+              <motion.div
+                key={id}
+                layout
+                initial={{ opacity: 0, scale: 0.9 }}
+                animate={{ opacity: 1, scale: 1 }}
+                exit={{ opacity: 0, scale: 0.9 }}
+                transition={{ duration: 0.5 }}
+                className={id}
+              >
+                {layoutsContent[activeIndex][id]}
+              </motion.div>
+            ))}
+          </AnimatePresence>
         </div>
       </main>
 
