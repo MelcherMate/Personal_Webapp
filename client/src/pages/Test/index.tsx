@@ -24,16 +24,16 @@ const layoutsContent: Record<number, Record<string, JSX.Element | string>> = {
     div4: <span>Content for div4 in layout 1</span>,
   },
   2: {
-    div1: (
+    div1: <span className="mateMelcher">Mate Melcher</span>,
+    div2: <span>Some other content for div2</span>,
+    div3: <span>Another content for div3</span>,
+    div4: (
       <blockquote className="buzzQuote">
         "Neil Armstrong was the first man to walk on the moon. I am the first
         man to piss his pants on the moon."
         <footer>― Buzz Aldrin</footer>
       </blockquote>
     ),
-    div2: <span>Some other content for div2</span>,
-    div3: <span>Another content for div3</span>,
-    div4: <span className="mateMelcher">Mate Melcher</span>,
     div5: <span>Content 5</span>,
     div6: (
       <div className="pdfButtons">

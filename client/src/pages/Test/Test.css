@@ -93,9 +93,8 @@
 /* =================== Layout 2 =================== */
 .layout-2 .div1 {
   grid-column: span 2 / span 2;
-  grid-row: span 2 / span 2;
   grid-column-start: 3;
-  grid-row-start: 2;
+  grid-row-start: 1;
 }
 .layout-2 .div2 {
   grid-column: span 2 / span 2;
@@ -111,8 +110,9 @@
 }
 .layout-2 .div4 {
   grid-column: span 2 / span 2;
+  grid-row: span 2 / span 2;
   grid-column-start: 3;
-  grid-row-start: 1;
+  grid-row-start: 2;
 }
 .layout-2 .div5 {
   grid-row: span 3 / span 3;
