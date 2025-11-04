@@ -265,16 +265,15 @@ a {
   }
 }
 
-  .linksGrid {
-    grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
-  }
+.linksGrid {
+  grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+}
 
-  .linkCard {
-    min-height: 90px;
-    padding: 16px 8px;
-  }
+.linkCard {
+  min-height: 90px;
+  padding: 16px 8px;
+}
 
-  .linkIcon {
-    font-size: 1.6em;
-  }
+.linkIcon {
+  font-size: 1.6em;
 }
