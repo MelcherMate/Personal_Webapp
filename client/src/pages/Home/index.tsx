@@ -1,189 +1,224 @@
-import { useEffect, useState } from "react";
-import { FaFacebook, FaFlask, FaGithub, FaLinkedin } from "react-icons/fa";
-import profile from "../../../public/img/IMG_3794 3.png";
-import bioengThesis from "../../../public/pdf/bioengThesisFinished.pdf";
-import econThesis from "../../../public/pdf/econThesisFinished.pdf";
+import {
+  FaCalculator,
+  FaCss3,
+  FaDatabase,
+  FaFacebook,
+  FaFlask,
+  FaGithub,
+  FaHtml5,
+  FaInstagram,
+  FaPython,
+  FaReact,
+} from "react-icons/fa";
+import { SiMongodb } from "react-icons/si";
 import "./Home.css";
 
-const Home = () => {
-  const [clicked, setClicked] = useState(false);
-  const [showToast, setShowToast] = useState(true);
-
-  const handleClick = () => {
-    setClicked(!clicked);
-  };
-
-  const handleDownload1 = () => {
-    const link = document.createElement("a");
-    link.href = bioengThesis;
-    link.download = "Bioengineering_BSc_Thesis_HU.pdf";
-    link.click();
-  };
-
-  const handleDownload2 = () => {
-    const link = document.createElement("a");
-    link.href = econThesis;
-    link.download = "Economics_BSc_Thesis_EN.pdf";
-    link.click();
-  };
-
-  const handleDownload3 = () => {
-    window.open("https://www.bioversee.com/");
-  };
-
-  const handleLink1 = () => {
-    window.open("https://www.linkedin.com/in/matemelcher/");
-  };
-
-  const handleLink2 = () => {
-    window.open(
-      "https://scholar.google.com/citations?user=udUgb-IAAAAJ&hl=hu&authuser=1"
-    );
-  };
-
-  const handleLink3 = () => {
-    window.open("https://github.com/MelcherMate");
-  };
-
-  const handleLink4 = () => {
-    window.open("https://www.facebook.com/profile.php?id=100080118015753");
-  };
-
-  useEffect(() => {
-    if (showToast) {
-      const timer = setTimeout(() => {
-        setShowToast(false);
-      }, 6000);
-      return () => clearTimeout(timer);
-    }
-  }, [showToast]);
-
+function Home() {
   return (
-    <main className="home">
-      <div className={`sun ${clicked ? "clicked" : ""}`} onClick={handleClick}>
-        <div className="sunContent">Welcome</div>
-      </div>
+    <>
+      <div className="pageLayout">
+        <aside className="leftAside"></aside>
 
-      <div className="orbit mercury-orbit">
-        <div className="planet mercury"></div>
-      </div>
-      <div className="orbit venus-orbit">
-        <div className="planet venus"></div>
-      </div>
-      <div className="orbit earth-orbit">
-        <div className="planet earth">
-          <div className="moon-orbit">
-            <div className="moon"></div>
-          </div>
-        </div>
-      </div>
-      <div className="orbit mars-orbit">
-        <div className="planet mars"></div>
-      </div>
-      <div className="orbit jupiter-orbit">
-        <div className="planet jupiter"></div>
-      </div>
-      <div className="orbit saturn-orbit">
-        <div className="planet saturn">
-          <div className="saturn-ring1"></div>
-          <div className="saturn-ring2"></div>
-        </div>
-      </div>
-      <div className="orbit uranus-orbit">
-        <div className="planet uranus"></div>
-      </div>
-      <div className="orbit neptune-orbit">
-        <div className="planet neptune"></div>
-      </div>
+        <main className="mainContent">
+          <header className="header">
+            <h1>Máté Melcher</h1>
+            <p>
+              Budapest, Hungary •{" "}
+              <a href="mailto:melchermate28@gmail.com">
+                melchermate28@gmail.com
+              </a>
+            </p>
+            <a
+              href="https://www.linkedin.com/in/mate-melcher-5a16601bb/"
+              target="_blank"
+              rel="noreferrer"
+              className="link"
+            >
+              LinkedIn Profile
+            </a>
+          </header>
 
-      <div className={`infoBubble infoBubble1`}>
-        <div className="infoBubbleContent infoBubbleContent1">
-          <div className="profileContainer">
-            <img src={profile} alt="Profile Image" className="profile" />
-          </div>
-        </div>
-      </div>
-      <div className={`infoBubble infoBubble2`}>
-        <div className="infoBubbleContent">
-          <h2 className="title">Bioengineering</h2>
-          <p className="paragraph paragraph2">
-            The jurney had it's ups and downs, but in 2023 I became a Biomedical
-            Engineer.
-          </p>
-          <button className="download1" onClick={handleDownload1}>
-            Download BSc Thesis
-          </button>
-        </div>
-      </div>
-      <div className={`infoBubble infoBubble3`}>
-        <div className="infoBubbleContent">
-          <h2 className="title">Economics</h2>
-          <p className="paragraph paragraph3">
-            Wanted to use my free time efficiently. Started studying economics
-            in 2021.
-          </p>
-          <button className="download2" onClick={handleDownload2}>
-            Download BSc Thesis
-          </button>
-        </div>
-      </div>
-      <div className={`infoBubble infoBubble4`}>
-        <div className="infoBubbleContent">
-          <h2 className="title">Software Development</h2>
-          <p className="paragraph paragraph4">
-            When I was a child I was a huge fan of LEGO. For me, softwares are
-            like LEGO toys, except they don't lay all around in my room.
-          </p>{" "}
-          <button className="download3" onClick={handleDownload3}>
-            Project Bioversee
-          </button>
-        </div>{" "}
-      </div>
-      <div className={`infoBubble infoBubble5`}>
-        <div className="infoBubbleContent infoBubbleContent5">
-          <button className="linkButton linkButton1" onClick={handleLink1}>
-            <FaLinkedin className="socialIcon" />
-            Linkedin
-          </button>
-          <button className="linkButton linkButton2" onClick={handleLink2}>
-            <FaFlask className="socialIcon" />
-            Google Scholar
-          </button>
-          <button className="linkButton linkButton3" onClick={handleLink3}>
-            <FaGithub className="socialIcon" />
-            GitHub
-          </button>
-          <button className="linkButton linkButton4" onClick={handleLink4}>
-            <FaFacebook className="socialIcon" />
-            Facebook
-          </button>
-        </div>
-      </div>
-      <div className={`infoBubble infoBubble6`}>
-        <div className="infoBubbleContent infoBubbleContent6">
-          <h2 className="title">Windsurf</h2>
-          <p className="paragraph paragraph6">
-            Following in my father's footsteps, I love spending time on the
-            water when the weather is rugged.
-          </p>
-        </div>
-      </div>
-      <div className={`infoBubble infoBubble7`}>
-        <div className="infoBubbleContent">
-          <h2 className="title">Ski</h2>
-          <p className="paragraph paragraph7">
-            I was only 3 when I started. Scince there is almost no place in the
-            Alpes I didn't tried.
-          </p>
-        </div>{" "}
-      </div>
+          <section className="introSection">
+            <p>
+              Hi, I'm Máté Melcher. I'm a passionate engineer, amateur
+              programmer, and macroeconomics enthusiast. I believe engineering
+              isn't just about invention—it's about creating solutions that
+              improve lives and make economic sense.<br></br> After working a
+              year as an economist at a multinational company, I realized how
+              much I missed engineering. Now, I'm studying Environmental,
+              Process & Energy Engineering at MCI Innsbruck, focusing on solving
+              real-world challenges in heat tranfer management.
+            </p>
+          </section>
 
-      <div className={`toast ${showToast ? "show" : "hide"}`}>
-        Click on the Sun!
-        <div className="progress-bar"></div>
+          <section className="linksSection">
+            <h2>Links & Projects</h2>
+            <div className="linksGrid">
+              <a
+                href="https://www.bioversee.com"
+                target="_blank"
+                rel="noreferrer"
+                className="linkCard"
+              >
+                <FaFlask className="linkIcon" />
+                <span>Bioversee</span>
+              </a>
+              <a
+                href="https://github.com/MelcherMate"
+                target="_blank"
+                rel="noreferrer"
+                className="linkCard"
+              >
+                <FaGithub className="linkIcon" />
+                <span>GitHub</span>
+              </a>
+              <a
+                href="https://www.instagram.com/mmate_skiing/"
+                target="_blank"
+                rel="noreferrer"
+                className="linkCard"
+              >
+                <FaInstagram className="linkIcon" />
+                <span>Instagram</span>
+              </a>
+              <a
+                href="https://www.facebook.com/profile.php?id=100080118015753"
+                target="_blank"
+                rel="noreferrer"
+                className="linkCard"
+              >
+                <FaFacebook className="linkIcon" />
+                <span>Facebook</span>
+              </a>
+            </div>
+          </section>
+
+          <section>
+            <h2>Professional Experience</h2>
+            <div className="entry">
+              <h3>
+                K&H Bank – Karrierstart! Talent Program Intern (2024–2025)
+              </h3>
+              <p>
+                Participated in a rotational program across Private Banking and
+                Corporate Finance. Gained strong analytical, teamwork, and
+                problem-solving skills while contributing to projects such as
+                the “Bank Branch of the Future” and “1 Million Project”.
+              </p>
+            </div>
+            <div className="entry">
+              <h3>Bioversee – Founder & Full-Stack Developer (2024–ongoing)</h3>
+              <p>
+                Founded Bioversee, developing web-based automation solutions for
+                industrial equipment. Integrated cloud control systems and
+                database synchronization tools for process control and
+                optimization.
+              </p>
+            </div>
+          </section>
+
+          <section>
+            <h2>Education</h2>
+            <div className="entry">
+              <h3>MCI Management Center Innsbruck (ongoing)</h3>
+              <p>
+                <strong>
+                  MSc in Environmental, Process and Energy Engineering
+                </strong>{" "}
+              </p>
+              <p>Thesis: TBD...</p>
+            </div>
+            <div className="entry">
+              <h3>University of Debrecen (2025)</h3>
+              <p>
+                <strong>BSc in Marketing & Commerce</strong>
+              </p>
+              <p>Thesis: Bioversee – A Startup for Industrial Automation</p>
+            </div>
+            <div className="entry">
+              <h3>University of Debrecen (2023)</h3>
+              <p>
+                <strong>BSc in Bioengineering</strong>
+              </p>
+              <p>
+                Thesis: The Use of <i>Saccharomyces bayanus</i> and{" "}
+                <i>S. pombe</i> in Cider Making
+              </p>
+            </div>
+          </section>
+
+          <section>
+            <h2>Volunteer Experience</h2>
+            <div className="entry">
+              <h3>Feledhetetlen Foundation (2021–2024)</h3>
+              <p>
+                Administrative staff at a dementia-focused non-profit,
+                increasing website traffic by 40%.
+              </p>
+            </div>
+            <div className="entry">
+              <h3>Surf Core – Windsurf Instructor (2019–2022)</h3>
+              <p>
+                Taught 100+ students aged 5–76, increasing retention by 30%
+                through hands-on teaching innovation.
+              </p>
+            </div>
+          </section>
+
+          {/* ====================== */}
+          {/*   TECHNICAL SKILLS     */}
+          {/* ====================== */}
+          <section className="skillsSection">
+            <h2>Technical Skills</h2>
+            <div className="skillsGrid">
+              <div className="skillCard">
+                <FaPython className="skillIcon" />
+                <span>Python</span>
+              </div>
+              <div className="skillCard">
+                <FaReact className="skillIcon" />
+                <span>React</span>
+              </div>
+              <div className="skillCard">
+                <SiMongodb className="skillIcon" />
+                <span>MongoDB</span>
+              </div>
+              <div className="skillCard">
+                <FaCalculator className="skillIcon" />
+                <span>Matlab</span>
+              </div>
+              <div className="skillCard">
+                <FaDatabase className="skillIcon" />
+                <span>PostgreSQL</span>
+              </div>
+              <div className="skillCard">
+                <FaGithub className="skillIcon" />
+                <span>Git & GitHub</span>
+              </div>
+              <div className="skillCard">
+                <FaHtml5 className="skillIcon" />
+                <span>HTML</span>
+              </div>
+              <div className="skillCard">
+                <FaCss3 className="skillIcon" />
+                <span>CSS</span>
+              </div>
+            </div>
+          </section>
+
+          <section>
+            <h2>Interests</h2>
+            <p>
+              Heat and Mass Transfer • Automation • Energy Storage •
+              Biotechnology • Macroeconomics
+            </p>
+          </section>
+        </main>
+
+        <aside className="rightAside"></aside>
       </div>
-    </main>
+    </>
   );
-};
+}
 
 export default Home;

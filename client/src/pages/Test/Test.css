@@ -33,21 +33,36 @@
   display: grid;
   grid-template-columns: repeat(6, 1fr);
   grid-template-rows: repeat(6, 1fr);
-  gap: 12px;
+  gap: 24px;
   width: 100%;
   height: 75vh;
   margin-top: 40px;
 }
 
 .parent > div {
+  position: relative;
   display: flex;
   align-items: center;
   justify-content: center;
   font-weight: bold;
+  overflow: hidden;
   font-size: 24px;
   color: white;
-  border-radius: 16px;
+  border-radius: 24px;
   background-color: gray;
+}
+
+.parent > div > * {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  margin: 0;
+  width: 90%;
+  text-align: center;
+
+  /* Responsive text sizing */
+  font-size: clamp(0.5rem, 1vw, 1rem);
 }
 
 /* =================== Layout 0 =================== */
@@ -238,8 +253,6 @@
 
 /* =================== Layout 2 custon styles================ */
 
-/* Custom style for div 4 (the name block) */
-
 /* Custom styling for div 1 (the quote block) */
 .buzzQuote {
   padding: 20px;
@@ -261,8 +274,15 @@
   opacity: 0.8;
 }
 
-/* Custom style for div 4 (the name block) */
+/* Custom style for div 2 (the intorduction block) */
 
+.intorductionText {
+  padding: 24px;
+  font-size: 0.9rem;
+  font-style: italic;
+}
+
+/* Custom style for div 4 (the name block) */
 .mateMelcher {
   padding: 20px;
   font-family: "Montserrat", sans-serif;
