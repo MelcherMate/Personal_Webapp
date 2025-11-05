@@ -7,10 +7,12 @@ import {
   FaGithub,
   FaHtml5,
   FaInstagram,
+  FaMicrosoft,
   FaPython,
   FaReact,
 } from "react-icons/fa";
 import { SiMongodb } from "react-icons/si";
+import profileImage from "../../../public/img/profNoBg.png";
 import "./Home.css";
 
 function Home() {
@@ -23,7 +25,7 @@ function Home() {
           <header className="header">
             <h1>Máté Melcher</h1>
             <p>
-              Budapest, Hungary •{" "}
+              Innsbruck, Austria •{" "}
               <a href="mailto:melchermate28@gmail.com">
                 melchermate28@gmail.com
               </a>
@@ -38,8 +40,11 @@ function Home() {
             </a>
           </header>
 
-          <section className="introSection">
-            <p>
+          <div className="introSection">
+            <div className="introImageWrapper">
+              <img src={profileImage} className="introImage" />
+            </div>
+            <p className="introText">
               Hi, I'm Máté Melcher. I'm a passionate engineer, amateur
               programmer, and macroeconomics enthusiast. I believe engineering
               isn't just about invention—it's about creating solutions that
@@ -49,10 +54,10 @@ function Home() {
               Process & Energy Engineering at MCI Innsbruck, focusing on solving
               real-world challenges in heat tranfer management.
             </p>
-          </section>
+          </div>
 
           <section className="linksSection">
-            <h2>Links & Projects</h2>
+            <h2>Social Links & Projects</h2>
             <div className="linksGrid">
               <a
                 href="https://www.bioversee.com"
@@ -176,12 +181,20 @@ function Home() {
                 <span>Python</span>
               </div>
               <div className="skillCard">
-                <FaReact className="skillIcon" />
-                <span>React</span>
+                <FaHtml5 className="skillIcon" />
+                <span>HTML</span>
+              </div>
+              <div className="skillCard">
+                <FaCss3 className="skillIcon" />
+                <span>CSS</span>
               </div>
               <div className="skillCard">
                 <SiMongodb className="skillIcon" />
                 <span>MongoDB</span>
+              </div>
+              <div className="skillCard">
+                <FaReact className="skillIcon" />
+                <span>React</span>
               </div>
               <div className="skillCard">
                 <FaCalculator className="skillIcon" />
@@ -196,12 +209,12 @@ function Home() {
                 <span>Git & GitHub</span>
               </div>
               <div className="skillCard">
-                <FaHtml5 className="skillIcon" />
-                <span>HTML</span>
+                <FaFlask className="skillIcon" />
+                <span>ChemCad</span>
               </div>
               <div className="skillCard">
-                <FaCss3 className="skillIcon" />
-                <span>CSS</span>
+                <FaMicrosoft className="skillIcon" />
+                <span>Office 365</span>
               </div>
             </div>
           </section>

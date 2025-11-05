@@ -1,18 +1,24 @@
-/* =======================
-   Base Layout
-======================= */
+/* =========================================================
+   GLOBAL BASE
+========================================================= */
+body {
+  margin: 0;
+  padding: 0;
+  background-color: #f3f5f8;
+  font-family: "Inter", "Segoe UI", sans-serif;
+  color: #1a1a1a;
+}
+
+/* =========================================================
+   LAYOUT
+========================================================= */
 .pageLayout {
   display: flex;
-  flex-direction: row;
-  justify-content: space-between;
-  min-height: 100vh;
-  background-color: #f3f5f8;
-  color: #1a1a1a;
-  font-family: "Inter", "Segoe UI", sans-serif;
-  padding: 20px;
+  justify-content: center;
   gap: 20px;
+  min-height: 100vh;
+  padding: 20px;
   box-sizing: border-box;
-  font-size: smaller;
 }
 
 .leftAside,
@@ -21,11 +27,10 @@
   max-width: 200px;
 }
 
-/* =======================
-   Main Content
-======================= */
 .mainContent {
-  flex: 3;
+  flex-grow: 1;
+  width: 100%;
+  max-width: 1000px;
   background: #ffffff;
   padding: 40px 60px;
   border-radius: 20px;
@@ -33,11 +38,12 @@
   display: flex;
   flex-direction: column;
   align-items: flex-start;
+  transition: max-width 0.4s ease;
 }
 
-/* =======================
-   Header
-======================= */
+/* =========================================================
+   HEADER
+========================================================= */
 .header {
   align-self: center;
   text-align: center;
@@ -53,40 +59,54 @@
 }
 
 .header p {
-  font-size: 1em;
   color: #555;
   margin-bottom: 0.5em;
 }
 
 .header a {
   color: #0077b5;
-  font-weight: 500;
   text-decoration: none;
+  font-weight: 500;
 }
 
-/* =======================
-   Intro Section
-======================= */
+/* =========================================================
+   INTRO SECTION
+========================================================= */
 .introSection {
   width: 100%;
-  background-color: #eaeaea;
-  border: none;
-  border-radius: 10px;
-  padding: 20px 25px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #0077b5;
+  border-radius: 24px;
+  padding: 25px 30px;
   margin-bottom: 2em;
-  line-height: 1.7;
-  color: #333;
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.03);
+  gap: 25px;
 }
 
-.introSection p {
-  font-size: 1.05em;
-  margin: 0;
+.introText {
+  line-height: 1.5;
+  color: white;
 }
 
-/* =======================
+.introImageWrapper {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+}
+
+.introImage {
+  width: 150px;
+  height: 150px;
+  object-fit: cover;
+  border-radius: 50%;
+  background: white;
+  padding: 6px;
+}
+
+/* =========================================================
    LINKS & PROJECTS
-======================= */
+========================================================= */
 .linksSection {
   width: 100%;
 }
@@ -106,174 +126,122 @@
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  min-height: 110px;
   text-decoration: none;
-  transition: transform 0.2s ease;
   color: #222;
+  min-height: 110px;
+  transition: background 0.25s ease;
 }
 
 .linkCard:hover {
-  transform: translateY(-3px);
+  background-color: #e5ebf1;
 }
 
 .linkIcon {
   font-size: 2em;
   color: #0077b5;
-  margin-bottom: 10px;
+  margin-bottom: 8px;
 }
 
-.linkCard span {
-  font-size: 1em;
-  font-weight: 500;
-  text-align: center;
-}
-
-/* =======================
-   Section Styling
-======================= */
+/* =========================================================
+   CONTENT SECTIONS (Experience, Education, etc.)
+========================================================= */
 section {
   width: 100%;
   margin-bottom: 2em;
   border-left: 4px solid #0077b5;
   padding-left: 15px;
-  text-align: left;
 }
 
 section h2 {
-  font-size: 1.6em;
-  color: #0077b5;
-  margin-bottom: 0.6em;
+  font-size: 1.5em;
   font-weight: 600;
+  color: #0077b5;
+  margin-bottom: 0.8em;
 }
 
 .entry {
-  margin-bottom: 1.5em;
-  line-height: 1.6;
+  margin-bottom: 1.2em;
 }
 
-.entry h3 {
+h3 {
+  margin: 0;
   font-size: 1.1em;
   font-weight: 600;
-  color: #222;
-  margin-bottom: 0.4em;
 }
 
-.entry p {
-  margin: 0.3em 0;
-  color: #444;
+p {
+  margin: 4px 0 0 0;
+  color: #555;
+  line-height: 1.5;
 }
 
-/* =======================
+/* =========================================================
    TECHNICAL SKILLS
-======================= */
+========================================================= */
 .skillsSection {
   width: 100%;
 }
 
 .skillsGrid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
-  gap: 20px;
+  grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+  gap: 12px;
   margin-top: 10px;
 }
 
 .skillCard {
-  background-color: #eef2f6;
-  border-radius: 14px;
-  padding: 20px 10px;
   display: flex;
-  flex-direction: column;
   align-items: center;
-  justify-content: center;
-  min-height: 110px;
-  font-size: larger;
-  transition: transform 0.2s ease;
+  gap: 8px;
+  padding: 10px 16px;
+  border-radius: 30px;
+  border: 2px solid #dce4ec;
+  background: #ffffff;
+  font-weight: 500;
+  color: #1f2937;
+  font-size: small;
 }
 
 .skillIcon {
-  font-size: 2em;
+  font-size: 1.3em;
   color: #0077b5;
-  margin-bottom: 10px;
 }
 
-.skillCard span {
-  font-size: 1em;
-  font-weight: 500;
-  color: #222;
-  text-align: center;
-}
+/* =========================================================
+   RESPONSIVE WIDTH STATE TRANSITIONS
+========================================================= */
 
-/* =======================
-   Links
-======================= */
-a {
-  color: #0077b5;
-  text-decoration: none;
-}
-
-/* =======================
-   Responsive Design
-======================= */
-@media (max-width: 900px) {
-  .pageLayout {
-    flex-direction: column;
-    align-items: center;
-    padding: 15px;
-  }
-
-  .leftAside,
-  .rightAside {
-    display: none;
-  }
-
+/* State 2: Medium layout */
+@media (max-width: 1000px) {
   .mainContent {
-    width: 100%;
-    max-width: 700px;
-    padding: 25px 20px;
-    align-items: flex-start;
-  }
-
-  .header h1 {
-    font-size: 2em;
-  }
-
-  section {
-    border-left: 3px solid #0077b5;
-  }
-
-  .skillIcon {
-    font-size: 1.8em;
+    max-width: 800px;
   }
 }
 
+/* State 3: Tablet layout, asides disappear */
+@media (max-width: 800px) {
+  .mainContent {
+    max-width: 600px;
+  }
+
+  .introSection {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .introText {
+    text-align: center;
+  }
+}
+
+/* State 4: Phone layout */
 @media (max-width: 600px) {
-  .header h1 {
-    font-size: 1.7em;
+  .mainContent {
+    max-width: 400px;
   }
 
-  .skillsGrid {
-    grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+  .introImage {
+    width: 120px;
+    height: 120px;
   }
-
-  .skillCard {
-    min-height: 90px;
-    padding: 16px 8px;
-  }
-
-  .skillIcon {
-    font-size: 1.6em;
-  }
-}
-
-.linksGrid {
-  grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
-}
-
-.linkCard {
-  min-height: 90px;
-  padding: 16px 8px;
-}
-
-.linkIcon {
-  font-size: 1.6em;
 }
