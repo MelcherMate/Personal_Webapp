@@ -242,4 +242,10 @@ p {
     width: 120px;
     height: 120px;
   }
+
+  .leftAside,
+  .rightAside {
+    flex: 1;
+    max-width: 0px;
+  }
 }
